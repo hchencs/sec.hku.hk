@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://hchencs.github.io"
+base_url = "https://hchencs.github.io/lab"
 
 # The site title and description; used in feeds by default.
 title = "JC STEM Lab of Intelligent Cybersecurity"

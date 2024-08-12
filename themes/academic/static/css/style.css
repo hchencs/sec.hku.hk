@@ -198,8 +198,8 @@ nav {
     /* padding: 1rem 0 0 0; */
 }
 
-header > div > nav ul,
-header > div > nav ol {
+header > div > div > nav ul,
+header > div > div > nav ol {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -212,18 +212,18 @@ header > div > nav ol {
     /* padding-inline-start: 0px; */
 }
 
-header > div > nav ul li,
-header > div > nav ol li {
+header > div > div > nav ul li,
+header > div > div > nav ol li {
     display: inline-block;
 }
 
-header > div > nav a, 
-header > div > nav a:visited {
+header > div > div > nav a, 
+header > div > div > nav a:visited {
     text-decoration: none;
     color: var(--text);
 }
 
-header > div > nav a {
+header > div > div > nav a {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -233,12 +233,12 @@ header > div > nav a {
   overflow: hidden;
 }
 
-header > div > nav a:hover {
+header > div > div > nav a:hover {
   cursor: pointer;
   color: var(--text-darker);
 }
 
-header > div > nav a:before {
+header > div > div > nav a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -251,9 +251,9 @@ header > div > nav a:before {
   transition-property: right, left;
   transition-timing-function: ease-out;
 }
-header > div > nav a:active:before, 
-header > div > nav a:focus:before, 
-header > div > nav a:hover:before {
+header > div > div > nav a:active:before, 
+header > div > div > nav a:focus:before, 
+header > div > div > nav a:hover:before {
   right: 0;
   left: 0;
 }
@@ -1005,4 +1005,10 @@ p > time {
 }
 .pagination-nav-arrow:hover {
   color: var(--code);
+}
+
+/* Added by chen */
+.logo {
+  font-size: 1.5rem;
+  padding: 2rem;
 }

@@ -80,17 +80,17 @@ body > * {
 /* header */
 body > header {
     background-color: var(--bg);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 .125rem .25rem var(--text-lighter);
+    /* border-bottom: 1px solid var(--border); */
+    /* box-shadow: 0 .125rem .25rem var(--text-lighter); */
     text-align: center;
     font-family: var(--serif-font);
     grid-column: -1/ 1;
-    padding: 0 0.5rem 0.5rem;
+    /* padding: 0 0.5rem 0.5rem; */
 }
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
-    padding-top: 1.5rem;
+    /* padding-top: 1.5rem; */
 }
 
 header>nav a.current,
@@ -389,7 +389,7 @@ article h2:first-child {
 }
 
 section {
-  padding: 2rem 1rem;
+  padding: 0rem 0rem;
 }
 
 /* Don't double separators when chaining sections */

@@ -1,6 +1,10 @@
 +++
 +++
 
-Welcome to the [JC](https://www.hkjc.com/) STEM Lab of Intelligent Cybersecurity at the [University of Hong Kong](https://hku.hk). The lab is co-hosted by the [Musketeers Foundation Institute of Data Science](https://datascience.hku.hk) and [Department of Computer Science](https://www.cs.hku.hk).
+JC STEM Lab of Intelligent Cybersecurity, co-hosted by the [Institute of Data Science](https://datascience.hku.hk) and [Department of Computer Science](https://www.cs.hku.hk), was established in late 2024 with a generous donation from the [Hong Kong Jockey Club](https://www.hkjc.com/).
+
+Our mission is to conduct cutting-edge research in the interdisciplinary area between cybersecurity and machine learning. We endeavor to apply the latest methods and models in machine learning to security problems and to improve the security, privacy, and robustness of machine learning.
+
+## Join us
 
 We are recruiting brilliant graduate students, postdoctoral researchers, and research scientists who are passionate about exploring the frontier of cybersecurity and machine learning. Please send your CV to `chenho AT hku.hk`

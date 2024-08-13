@@ -196,8 +196,8 @@ navbar_items = [
 ]
 
 [extra.favicon]
-favicon_16x16 = "/img/favicons/android-chrome-192x192.png"
-favicon_32x32 = "/img/favicons/android-chrome-512x512.png"
-apple_touch_icon = "/img/favicons/apple-touch-icon.png"
-safari_pinned_tab = "/img/favicons/safari-pinned-tab.svg"
+favicon_16x16 = "/img/favicons/logo.svg"
+favicon_32x32 = "/img/favicons/logo.svg"
+apple_touch_icon = "/img/favicons/logo.svg"
+safari_pinned_tab = "/img/favicons/apple-touch-icon.png"
 webmanifest = "/img/favicons/site.webmanifest"

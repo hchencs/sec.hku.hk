@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="95.25mm" height="25.4mm" viewBox="0 0 9525 2540" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+<svg version="1.2" width="99.06mm" height="25.4mm" viewBox="0 0 9906 2540" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
-   <rect x="0" y="0" width="9525" height="2540"/>
+   <rect x="0" y="0" width="9906" height="2540"/>
   </clipPath>
   <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
-   <rect x="9" y="2" width="9506" height="2535"/>
+   <rect x="9" y="2" width="9887" height="2535"/>
   </clipPath>
  </defs>
  <defs>
@@ -129,8 +129,8 @@
       </g>
       <g class="TextShape">
        <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="1718" y="95" width="8094" height="2306"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1968" y="669"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">JC STEM Lab of</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="1968" y="1451"><tspan font-family="Arial, sans-serif" font-size="635px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Intelligent Cybersecurity</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="1968" y="2131"><tspan font-family="AR PL UMing HK" font-size="494px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">賽馬會智能數位安全創科實驗室</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="2018" y="95" width="7925" height="2306"/>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2268" y="669"><tspan font-family="Arial, sans-serif" font-size="494px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">JC STEM Lab of</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2268" y="1451"><tspan font-family="Arial, sans-serif" font-size="635px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Intelligent Cybersecurity</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="2268" y="2131"><tspan font-family="AR PL UMing HK" font-size="494px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">賽馬會智能數位安全創科實驗室</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>

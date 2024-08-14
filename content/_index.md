@@ -7,4 +7,4 @@ Our mission is to conduct cutting-edge research in the interdisciplinary area be
 
 ## Join
 
-We are recruiting brilliant graduate students, postdoctoral researchers, and research scientists who are passionate about exploring the frontier of cybersecurity and machine learning. Please send your CV to `chenho AT hku.hk`
+We are recruiting brilliant researchers, postdoctoral scholars, and graduate students who are passionate about exploring the frontier of cybersecurity and machine learning. Please send your CV to `chenho AT hku.hk`

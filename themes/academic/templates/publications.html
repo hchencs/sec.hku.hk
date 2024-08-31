@@ -1,27 +1,26 @@
 {% extends "base.html" %}
 
-{% macro print_entry(entry) %}
-{% set tags = entry.tags %}
-<li class="publist-item">
-  <a name="{{ entry.citation_key }}"></a>
-  <strong>{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</strong>
-  {% if not tags.nopdf %}
-  <a href="https://hchencs.github.io/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg"
-      title="PDF"></a>
-  {% endif %}
-  {% if tags.doi %}
-  <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI" width="32"></a>
-  {% endif %}
-  {% if tags.addendum %}
-  {% if tags.addendum | lower == "best paper award" %}
-  <img width="32" src="/img/award.svg" title="Best paper award">
-  {% endif %}
-  {% endif %}
-  <details class="bibtex">
-    <summary>
-      BibLaTex
-    </summary>
-    <pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
+{% macro print_entry(entry) %}  
+  {% set tags = entry.tags %}
+  <li class="publist-item">
+    <a name="{{ entry.citation_key }}"></a>
+    <strong>{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</strong>
+    {% if not tags.nopdf %}
+      <a href="https://hchencs.github.io/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg" title="PDF"></a> 
+    {% endif %}
+    {% if tags.doi %}
+      <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI" width="32"></a>
+    {% endif %}
+    {% if tags.addendum %}
+      {% if tags.addendum | lower == "best paper award" %}
+        <img width="32" src="/img/award.svg" title="Best paper award">
+      {% endif %}
+    {% endif %}
+    <details class="bibtex">
+        <summary>
+          BibLaTex
+        </summary>
+        <pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
     author = { {{- tags.author -}} },
     title = { {{- tags.title -}} },
 {%- if entry.entry_type == "inproceedings" %}  
@@ -48,98 +47,92 @@
     doi = { {{- tags.doi -}} },
 {%- endif %}
 }</code></pre>
-  </details><br>
-  {% for author in tags.author | split(pat=" and ") %}
-  {%- set name = author | split(pat=",") -%}
-  {% set firstname = name.1 | default(value="") %}
-  {%- set author = firstname ~ " " ~ name.0 | trim %}
-  {%- if not loop.first -%}
-  {%- if not loop.last or loop.index0 != 1 -%}
-  ,
-  {% endif %}
-  {% if loop.last %}
-  and
-  {% endif %}
-  {% endif %}
-  {% if author == config.extra.author %}
-  <strong>{{ author }}</strong>;
-  {% else %}
-  {{ author }}
-  {%- endif -%}
-  {% endfor %}
-  <br>
-  {% if entry.entry_type == "inproceedings" %}
-  <i>{{ tags.booktitle | replace(from="\", to="") }}</i>,
-  <time>{{ tags.date | truncate(length=4, end="")}}</time>
-  {% elif entry.entry_type == "article" %}
-  <i>{{ tags.journal | replace(from="\", to="") }}</i>,
-  <time>
-    {{ tags.volume -}}
-    {%- if tags.number -%}
-    .{{ tags.number }}
+      </details><br>
+    {% for author in tags.author | split(pat=" and ") %}
+      {%- if not loop.first -%}
+        {%- if not loop.last or loop.index0 != 1 -%}
+        ,
+        {% endif %}
+        {% if loop.last %}
+        &amp;
+        {% endif %}
+      {% endif %}
+      {%- set name = author | split(pat=",") -%}
+      {%- set initial = name.1 | default(value="") | truncate(length=2, end="") -%}
+      {%- set author_str = name.0 ~ "," ~ initial ~ "." | trim %}
+      {% if author == "Chen, Hao" %}
+          <strong>{{ author_str }}</strong>
+      {%- else %}
+        {{ author_str }} 
+      {%- endif -%}
+    {% endfor %}
+    <br>
+    {% if entry.entry_type == "inproceedings" %}
+      <i>{{ tags.booktitle | replace(from="\", to="") }}</i>,
+      <time>{{ tags.date | truncate(length=4, end="")}}</time>
+    {% elif entry.entry_type == "article" %}
+      <i>{{ tags.journal | replace(from="\", to="") }}</i>,
+      <time>
+        {{ tags.volume -}}
+        {%- if tags.number -%}
+        .{{ tags.number }}
+        {% endif %}
+        ({{ tags.year }})</time>
+      {%- if tags.pages -%}
+        , pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}
+      {% endif %}
+    {% elif entry.entry_type == "inbook" %}
+      In <i>{{ tags.booktitle | replace(from="\", to="") }}</i>, pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}. {{ tags.publisher }}, {{ tags.year }}
+    {% elif entry.entry_type == "misc" %}
+      {{ tags.year }}
     {% endif %}
-    ({{ tags.year }})</time>
-  {%- if tags.pages -%}
-  , pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}
-  {% endif %}
-  {% elif entry.entry_type == "inbook" %}
-  In <i>{{ tags.booktitle | replace(from="\", to="") }}</i>, pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe
-  }}. {{ tags.publisher }}, {{ tags.year }}
-  {% elif entry.entry_type == "misc" %}
-  {{ tags.year }}
-  {% endif %}
-<li>
-  {% endmacro %}
+  <li>
+{% endmacro %}
 
-  {% block content %}
-  <article>
-    <section>
-      <!-- <h1 class="title">
-      {{ section.title }}
-    </h1> -->
-      {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
-      <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
-      <h2>Conferences</h2>
-      <ul class="publist">
-        {% for entry in data.bibliographies %}
-        {% if entry.entry_type == "inproceedings" %}
+{% block content %}
+<article>
+  <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
+  {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
+  <section>
+    <h2>Conferences</h2>
+    <ul class="publist">
+    {% for entry in data.bibliographies %}
+      {% if entry.entry_type == "inproceedings" %}
         {{ self::print_entry(entry=entry) }}
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-    <section>
-      <a name="article"></a>
-      <h2>Journals</h2>
-      <ul class="publist">
-        {% for entry in data.bibliographies %}
-        {% if entry.entry_type == "article" %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </section>
+  <section>
+      <a name="article"></a><h2>Journals</h2>
+    <ul class="publist">
+    {% for entry in data.bibliographies %}
+      {% if entry.entry_type == "article" %}
         {{ self::print_entry(entry=entry) }}
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-    <section>
-      <a name="inbook"></a>
-      <h2>Book chapters</h2>
-      <ul class="publist">
-        {% for entry in data.bibliographies %}
-        {% if entry.entry_type == "inbook" %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </section>
+  <section>
+    <a name="inbook"></a><h2>Book chapters</h2>
+    <ul class="publist">
+    {% for entry in data.bibliographies %}
+      {% if entry.entry_type == "inbook" %}
         {{ self::print_entry(entry=entry) }}
-        {% endif %}
-        {% endfor %}
-      </ul>
-      <a name="misc"></a>
-    </section>
-    <section>
-      <h2>Preprints</h2>
-      <ul class="publist">
-        {% for entry in data.bibliographies %}
-        {% if entry.entry_type == "misc" %}
-        {{ self::print_entry(entry=entry) }}
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-  </article>
-  {% endblock content %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </section>
+  {% set data = load_data(path="content/publications/preprint.bib", format="bibtex") %}
+  <section>
+    <a name="misc"></a><h2>Preprints</h2>
+    <ul class="publist">
+    {% for entry in data.bibliographies %}
+      <!-- {% if entry.entry_type == "misc" %} -->
+      {{ self::print_entry(entry=entry) }}
+      <!-- {% endif %} -->
+    {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endblock content %}

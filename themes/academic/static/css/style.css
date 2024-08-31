@@ -757,7 +757,7 @@ abbr[title] {
 }
 
 .publist-item {
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.5rem;
   background-color: var(--bg-darker);
   padding: 1rem;
   border-radius: 20px;
@@ -1010,5 +1010,5 @@ p > time {
 /* Added by chen */
 .logo {
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 0.5rem;
 }

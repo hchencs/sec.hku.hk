@@ -60,11 +60,7 @@
       {%- set name = author | split(pat=",") -%}
       {%- set initial = name.1 | default(value="") | truncate(length=2, end="") -%}
       {%- set author_str = name.0 ~ "," ~ initial ~ "." | trim %}
-      {% if author == "Chen, Hao" %}
-          <strong>{{ author_str }}</strong>
-      {%- else %}
-        {{ author_str }} 
-      {%- endif -%}
+      {{ author_str }} 
     {% endfor %}
     <br>
     {% if entry.entry_type == "inproceedings" %}

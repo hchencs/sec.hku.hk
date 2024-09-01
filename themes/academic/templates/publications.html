@@ -9,16 +9,16 @@
       <a href="https://hchencs.github.io/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg" title="PDF"></a> 
     {% endif %}
     {% if tags.doi %}
-      <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI" width="32"></a>
+      <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI"></a>
     {% endif %}
     {% if tags.addendum %}
       {% if tags.addendum | lower == "best paper award" %}
-        <img width="32" src="/img/award.svg" title="Best paper award">
+        <img src="/img/award.svg" title="Best paper award">
       {% endif %}
     {% endif %}
     <details class="bibtex">
         <summary>
-          BibLaTex
+          BibLaTeX
         </summary>
         <pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
     author = { {{- tags.author -}} },
@@ -50,11 +50,10 @@
       </details><br>
     {% for author in tags.author | split(pat=" and ") %}
       {%- if not loop.first -%}
-        {%- if not loop.last or loop.index0 != 1 -%}
-        ,
-        {% endif %}
         {% if loop.last %}
-        &amp;
+          &amp;
+        {% else %}
+          ,
         {% endif %}
       {% endif %}
       {%- set name = author | split(pat=",") -%}

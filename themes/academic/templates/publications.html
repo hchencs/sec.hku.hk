@@ -15,7 +15,7 @@
         <img src="/img/award.svg" title="Best paper award">
       {% endif %}
     {% endif %}
-    <details class="bibtex"><summary>BibLaTeX</summary><pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
+    <details class="bibtex"><summary><img src="/img/quote.svg" title="BibLaTeX"></summary><pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
     author = { {{- tags.author -}} },
     title = { {{- tags.title -}} },
 {%- if entry.entry_type == "inproceedings" %}  

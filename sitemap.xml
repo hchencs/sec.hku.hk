@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://sec.hku.hk/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/people/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/publications/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/research/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/resources/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/resources/latex/</loc>
+    </url>
+    <url>
+        <loc>https://sec.hku.hk/resources/writing/</loc>
+    </url>
+</urlset>

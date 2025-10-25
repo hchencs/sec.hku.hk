@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% macro print_entry(entry) %}
+{% set tags = entry.tags %}
+<li class="publist-item">
+    <a id="{{ entry.citation_key }}"></a><strong>{{ tags.title | replace(from="{", to="") | replace(from="}", to="")
+        }}</strong>
+    {% if not tags.nopdf %}
+    <a href="https://hchencs.github.io/publications/{{ entry.citation_key | lower }}.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a>
+    {% endif %}
+    {% if tags.doi %}
+    <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI" class="doi"></a>
+    {% endif %}
+    {% if tags.addendum %}
+    {% if tags.addendum | lower == "best paper award" %}
+    <i class="fa-solid fa-award" title="Best paper award"></i>
+    {% endif %}
+    {% endif %}
+    <details class="bibtex">
+        <summary><i class="fa-solid fa-quote-left" title="BibLaTex"></i></summary>
+        <pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
+    author = { {{- tags.author -}} },
+    title = { {{- tags.title -}} },
+{%- if entry.entry_type == "inproceedings" %}  
+    booktitle = { {{- tags.booktitle -}} },
+    date = { {{- tags.date -}} },
+    {%- if tags.address %}
+    address = { {{- tags.address -}} },
+    {%- endif -%}
+{%- elif entry.entry_type == "article" %}
+    journal = { {{- tags.journal -}} },
+    year = { {{- tags.year -}} },
+    volume = { {{- tags.volume -}} },
+    {%- if tags.number %}
+    number = { {{- tags.number -}} },
+    {%- endif -%}
+{%- elif entry.entry_type == "inbook" %}
+    booktitle = { {{- tags.booktitle -}} },
+    year = { {{- tags.year -}} },
+    pages = { {{- tags.pages -}} },
+    editor = { {{- tags.editor -}} },
+    publisher = { {{- tags.publisher -}} },
+{%- endif %}
+{%- if tags.doi %}
+    doi = { {{- tags.doi -}} },
+{%- endif %}
+}</code></pre>
+    </details>
+    {%- for author in tags.author | split(pat=" and ") %}
+    {%- if not loop.first -%}
+    {% if loop.last %}
+    &amp;
+    {%- else -%}
+    ,
+    {% endif %}
+    {% endif %}
+    {%- set name = author | split(pat=",") -%}
+    {%- set initial = name.1 | default(value="") | truncate(length=2, end="") -%}
+    {%- set author_str = name.0 ~ "," ~ initial ~ "." | trim %}
+    {{ author_str }}
+    {% endfor -%}
+    <br>
+    {%- if entry.entry_type == "inproceedings" -%}
+    <i>{{ tags.booktitle | replace(from="\", to="") }}</i>,
+    {{ tags.date | truncate(length=4, end="")}}
+    {%- elif entry.entry_type == "article" -%}
+    <i>{{ tags.journal | replace(from="\", to="") }}</i>,
+    {{ tags.volume -}}
+    {%- if tags.number -%}
+    .{{ tags.number }}
+    {% endif %}
+    ({{ tags.year }})
+    {%- if tags.pages -%}
+    , pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}
+    {% endif %}
+    {%- elif entry.entry_type == "inbook" -%}
+    In <i>{{ tags.booktitle | replace(from="\", to="") }}</i>, pp. {{ tags.pages | replace(from="--", to="&ndash;") |
+    safe }}. {{ tags.publisher }}, {{ tags.year }}
+    {%- elif entry.entry_type == "misc" -%}
+    {{ tags.year }}
+    {% endif %}
+    <hr>
+</li>
+{% endmacro %}
+
+{% block content %}
+<div class="section-template">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ page.title }}</h1>
+        </div>
+
+        <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
+        {% set data = load_data(path="data/publications/paper.bib", format="bibtex") %}
+        <h2>Conferences</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "inproceedings" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <a id="article"></a>
+        <h2>Journals</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "article" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <a id="inbook"></a>
+        <h2>Book chapters</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "inbook" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
+        <a id="misc"></a>
+        <h2>Preprints</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            <!-- {% if entry.entry_type == "misc" %} -->
+            {{ self::print_entry(entry=entry) }}
+            <!-- {% endif %} -->
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<style>
+    .publications-metadata {
+        max-width: 800px;
+        margin: 1rem auto 2rem auto;
+        padding: 1rem;
+        background: var(--secondary-background, #f8f9fa);
+        border-left: 4px solid var(--primary-color, #007bff);
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    .metadata-info {
+        margin: 0;
+        color: var(--text-secondary, #6c757d);
+    }
+
+    .metadata-label {
+        font-weight: 600;
+        color: var(--text-color, #212529);
+    }
+
+    .metadata-separator {
+        margin: 0 0.5rem;
+        color: var(--text-secondary, #6c757d);
+    }
+
+    .metadata-info a {
+        color: var(--primary-color, #007bff);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .metadata-info a:hover {
+        text-decoration: underline;
+    }
+
+    .publications-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .publication-item {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: var(--card-background);
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+    .publication-item:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--hover-shadow);
+    }
+
+    .publication-title {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .publication-title a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .publication-title a:hover {
+        text-decoration: underline;
+    }
+
+    .publication-meta {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    .publication-year {
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .publication-venue {
+        font-style: italic;
+        color: var(--text-color);
+    }
+
+    .publication-volume {
+        color: var(--text-color);
+    }
+
+    .publication-authors {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    .author {
+        font-weight: 500;
+    }
+
+    .highlighted-author {
+        color: #FEBC11;
+        font-weight: 600;
+    }
+
+    .publication-abstract details {
+        margin-top: 1rem;
+    }
+
+    .publication-abstract summary {
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--text-color);
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .publication-abstract summary:hover {
+        color: var(--primary-color);
+    }
+
+    .publication-abstract p {
+        margin: 0.5rem 0 0 0;
+        padding: 0.5rem 0;
+        line-height: 1.6;
+        color: var(--text-color);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .publication-footer {
+        margin-top: 1rem;
+    }
+
+    .publication-link {
+        padding: 0.5rem 1rem;
+        background-color: var(--border-color);
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .publication-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .publication-item {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+{% endblock content %}

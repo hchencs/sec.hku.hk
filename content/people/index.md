@@ -27,4 +27,3 @@ page_template = "page.html"
 - Lyu, Qingyang
 - Tang, Cleo (Yixuan)
 - Wang, Hanyu
-- Wang, Yankai

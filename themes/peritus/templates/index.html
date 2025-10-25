@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <!-- Bio section -->
+            <div class="bio-section">
+                {{ section.content | safe }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

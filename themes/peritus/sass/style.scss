@@ -339,34 +339,31 @@ details, summary {
 }
 
 // Publications
-.publist-item img {
-  height: 1.5rem;
-} 
+.publist-item {
+  margin-bottom: 1rem;
+  
+  img {
+    height: 1.5rem;
+  }
 
-.publist-item hr {
-  color: #ffffff;
-  width: 50%;
-  // text-align:left;
-  // margin-left:0;
-}
+  .fa-regular.fa-file-pdf {
+    font-size: 1.5rem;
+    color: red;
+  }
 
-.publist-item .fa-regular.fa-file-pdf {
-  font-size: 1.5rem;
-  color: red;
-}
+  .fa-solid.fa-quote-left {
+    font-size: 1.5rem;
+    color: blue;
+  }
 
-.publist-item .fa-solid.fa-quote-left {
-  font-size: 1.5rem;
-  color: blue;
-}
+  .fa-solid.fa-award {
+    font-size: 1.5rem;
+    color: goldenrod;
+  }
 
-.publist-item .fa-solid.fa-award {
-  font-size: 1.5rem;
-  color: goldenrod;
-}
-
-.publist-item .doi {
-  height: 1.5rem;
+  .doi {
+    height: 1.5rem;
+  }
 }
 
 /*

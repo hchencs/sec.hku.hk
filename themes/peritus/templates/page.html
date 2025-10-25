@@ -6,49 +6,11 @@
         <article class="page-content">
             <header class="page-header">
                 <h1>{{ page.title }}</h1>
-                
-                {% if page.date %}
-                <time class="page-date">{{ page.date | date(format="%B %d, %Y") }}</time>
-                {% endif %}
-                
-                {% if page.extra.authors %}
-                <div class="page-authors">
-                    <strong>Authors:</strong>
-                    {% for author in page.extra.authors %}
-                        {{ author }}{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
-                
-                {% if page.extra.venue %}
-                <div class="page-venue">
-                    <strong>Published in:</strong> {{ page.extra.venue }}
-                </div>
-                {% endif %}
-                
-                {% if page.extra.links %}
-                <div class="page-links">
-                    {% for link in page.extra.links %}
-                    <a href="{{ link.url }}" class="page-link" target="_blank">
-                        {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
-                        {{ link.name }}
-                    </a>
-                    {% endfor %}
-                </div>
-                {% endif %}
             </header>
             
             <div class="page-body">
                 {{ page.content | safe }}
             </div>
-            
-            {% if page.extra.citation %}
-            <div class="citation-box">
-                <h3>Citation</h3>
-                <pre class="citation-text">{{ page.extra.citation }}</pre>
-                <button onclick="copyCitation()" class="copy-citation-btn">Copy Citation</button>
-            </div>
-            {% endif %}
         </article>
     </div>
 </div>
@@ -65,52 +27,14 @@
 
 .page-header {
     margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    // padding-bottom: 2rem;
+    // border-bottom: 1px solid var(--border-color);
 }
 
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-}
-
-.page-date {
-    color: var(--secondary-color);
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.page-authors, .page-venue {
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.page-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.page-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 0.375rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.page-link:hover {
-    background-color: darken(#2962ff, 10%);
-    transform: translateY(-2px);
-    box-shadow: var(--hover-shadow);
 }
 
 .page-body {
@@ -168,47 +92,6 @@
     background: none;
     border: none;
     padding: 0;
-}
-
-.citation-box {
-    margin-top: 3rem;
-    padding: 2rem;
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
-}
-
-.citation-box h3 {
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.citation-text {
-    background-color: var(--background-color);
-    border: 1px solid var(--border-color);
-    border-radius: 0.375rem;
-    padding: 1rem;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    margin-bottom: 1rem;
-}
-
-.copy-citation-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.copy-citation-btn:hover {
-    background-color: darken(#2962ff, 10%);
 }
 </style>
 

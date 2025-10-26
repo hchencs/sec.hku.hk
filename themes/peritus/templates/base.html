@@ -99,7 +99,7 @@
                 <li class="nav-item">
                     <a href="{{ get_url(path=" /") }}" class="nav-link">
                         {%- if config.extra.home_icon -%}
-                        <img src="{{ config.extra.home_icon }}"
+                        <img src="{{ config.extra.home_icon | safe }}"
                             alt="{{ config.title }}" width="300" style="padding-top: 1rem">
                         {%- else -%}
                             <i class="fas fa-home"></i>
@@ -134,7 +134,7 @@
     <footer class="footer">
         <div class="footer-content">
             <p style="font-size: 0.8em;">Last updated: {{ now() | date }}. Built with <a
-                    href="https://www.getzola.org/">Zola</a> using the <a href="https://github.com/jskaza/peritus">peritus</a> theme.</p>
+                    href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/jskaza/peritus">peritus</a>.</p>
         </div>
     </footer>
 

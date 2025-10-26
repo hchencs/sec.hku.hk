@@ -1,18 +1,30 @@
+# <customize>
 # The URL the site will be built for
 base_url = "https://sec.hku.hk"
+title = "JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong"
+description = "Our lab conducts research in computer and information security and machine learning."
+# </customize>
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# The site title and description; they are used in feeds by default.
-title = "JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong"
-description = "Our lab conducts research in computer and information security and machine learning."
 
 # Theme
 theme = "peritus"
 
 [extra]
-# Put all your custom variables here
+# Features to enable
+enable_dark_mode = true
+enable_search = false
+
+# <customize>
+# avatar = ""
+banner = "img/logo.svg"
+name = "JC STEM Lab of Intelligent Cybersecurity"
+
+[extra.publication]
+prefix = ""
+# If author isn't empty, then highlight him/her in the author list.
+author = ""
 
 [[extra.menu]]
 name = "Research"
@@ -34,9 +46,7 @@ name = "Resources"
 url = "/resources/"
 weight = 4
 
-# Features to enable
-enable_dark_mode = true
-enable_search = false
+# </customize>
 
 # Color theme configuration
 [extra.colors]

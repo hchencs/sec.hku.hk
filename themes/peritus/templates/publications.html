@@ -9,7 +9,7 @@
     <a href="{{ config.extra.publication.prefix }}/publications/{{ entry.citation_key | lower }}.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a>
     {% endif %}
     {% if tags.doi %}
-    <a href="{{ tags.doi }}"><i class="ai ai-doi" title="DOI" class="doi"></i></a>
+    <a href="{{ tags.doi }}"><i class="ai ai-doi" title="DOI"></i></a>
     {% endif %}
     {% if tags.addendum %}
     {% if tags.addendum | lower == "best paper award" %}
@@ -88,54 +88,7 @@
 </li>
 {% endmacro %}
 
-{% block content %}
-<div class="section-template">
-    <div class="container">
-        <div class="section-header">
-            <h1>{{ page.title }}</h1>
-        </div>
-
-        <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
-        {% set data = load_data(path="data/publications/paper.bib", format="bibtex") %}
-        <h2>Conferences</h2>
-        <ul class="publist">
-            {% for entry in data.bibliographies %}
-            {% if entry.entry_type == "inproceedings" %}
-            {{ self::print_entry(entry=entry) }}
-            {% endif %}
-            {% endfor %}
-        </ul>
-        <a id="article"></a>
-        <h2>Journals</h2>
-        <ul class="publist">
-            {% for entry in data.bibliographies %}
-            {% if entry.entry_type == "article" %}
-            {{ self::print_entry(entry=entry) }}
-            {% endif %}
-            {% endfor %}
-        </ul>
-        <a id="inbook"></a>
-        <h2>Book chapters</h2>
-        <ul class="publist">
-            {% for entry in data.bibliographies %}
-            {% if entry.entry_type == "inbook" %}
-            {{ self::print_entry(entry=entry) }}
-            {% endif %}
-            {% endfor %}
-        </ul>
-        {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
-        <a id="misc"></a>
-        <h2>Preprints</h2>
-        <ul class="publist">
-            {% for entry in data.bibliographies %}
-            <!-- {% if entry.entry_type == "misc" %} -->
-            {{ self::print_entry(entry=entry) }}
-            <!-- {% endif %} -->
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-
+{% block style %}
 <style>
     .publications-metadata {
         max-width: 800px;
@@ -297,4 +250,53 @@
         }
     }
 </style>
+{% endblock style %}
+
+{% block content %}
+<div class="section-template">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ page.title }}</h1>
+        </div>
+
+        <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
+        {% set data = load_data(path="data/publications/paper.bib", format="bibtex") %}
+        <h2>Conferences</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "inproceedings" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <a id="article"></a>
+        <h2>Journals</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "article" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <a id="inbook"></a>
+        <h2>Book chapters</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            {% if entry.entry_type == "inbook" %}
+            {{ self::print_entry(entry=entry) }}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
+        <a id="misc"></a>
+        <h2>Preprints</h2>
+        <ul class="publist">
+            {% for entry in data.bibliographies %}
+            <!-- {% if entry.entry_type == "misc" %} -->
+            {{ self::print_entry(entry=entry) }}
+            <!-- {% endif %} -->
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock content %}

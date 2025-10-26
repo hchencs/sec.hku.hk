@@ -20,6 +20,9 @@ enable_search = false
 # avatar = ""
 banner = "img/logo.svg"
 name = "JC STEM Lab of Intelligent Cybersecurity"
+# role = ""
+# organization = ""
+# membership = ""
 
 [extra.publication]
 prefix = ""

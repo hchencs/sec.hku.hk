@@ -13,6 +13,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
 
+    {% block style %}{% endblock style %}
+
     <!-- Dynamic color configuration from config.toml -->
     {% if config.extra.colors %}
     <style>

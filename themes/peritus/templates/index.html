@@ -15,7 +15,7 @@
             <div class="bio-section">
                 <!-- Display either banner or name -->
                 {% if config.extra.banner %}
-                <img src="{{ config.extra.banner }}" alt="{{ config.extra.name }}" class="banner">
+                <img src="{{ config.extra.banner }}" alt="{{ config.extra.banner_name }}" class="banner">
                 {% elif config.extra.name %}
                 <h1 class="name">{{ config.extra.name }}</h1>
                 {% endif %}
@@ -28,10 +28,13 @@
                 {% if config.extra.membership %}
                 <p class="membership">{{ config.extra.membership }}</p>
                 {% endif %}
-
+                {% if config.extra.address %}
+                <p class="address"><i class="fas fa-envelope"></i> {{ config.extra.address }}</p>
+                {% endif %}
+                
                 <div class="bio">
                     <!-- <h3>About Me</h3>  -->
-                    <div>{{ section.content | safe }} </div>
+                    <div>{{ section.content | safe }}</div>
                 </div>
 
                 <!-- Download CV button -->

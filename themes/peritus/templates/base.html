@@ -97,8 +97,14 @@
             <!-- Navigation links -->
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
-                    <a href="{{ get_url(path=" /") }}" class="nav-link"><img src="/img/logo.svg"
-                            alt="{{ config.title }}" width="300" style="padding-top: 1rem"></a>
+                    <a href="{{ get_url(path=" /") }}" class="nav-link">
+                        {%- if config.extra.home_icon -%}
+                        <img src="{{ config.extra.home_icon }}"
+                            alt="{{ config.title }}" width="300" style="padding-top: 1rem">
+                        {%- else -%}
+                            <i class="fas fa-home"></i>
+                        {%- endif -%}
+                    </a>
                 </li>
                 {% if config.extra.menu %}
                 {% for item in config.extra.menu %}

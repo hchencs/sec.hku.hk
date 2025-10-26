@@ -221,7 +221,7 @@ summary {
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    text-align: center;
+    // text-align: center;
     gap: 2rem;
   }
 }
@@ -272,13 +272,14 @@ summary {
     font-weight: 500;
   }
 
-  .organization, .membership {
+  .organization, .membership, .address {
     font-size: 1.2rem;
     // color: var(--secondary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .bio {
+    margin-top: 2rem;
     margin-bottom: 2rem;
 
     h3 {
@@ -288,11 +289,9 @@ summary {
     p {
       font-size: 1.1rem;
       line-height: 1.7;
+      margin-bottom: 1em;
     }
   }
-
-  max-width: 800px;
-  margin-left: 8em;
 }
 
 // Buttons

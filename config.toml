@@ -17,15 +17,24 @@ enable_dark_mode = true
 enable_search = false
 
 # <customize>
+# Left avatar
 # avatar = ""
+# Top banner
 banner = "img/logo.svg"
-name = "JC STEM Lab of Intelligent Cybersecurity"
-# role = ""
+# Alt text of banner
+banner_name = "JC STEM Lab of Intelligent Cybersecurity"
+# If unset, use the default home icon
+home_icon = "img/logo.svg"
+
+# name = ""
+# role = "Professor"
 # organization = ""
-# membership = ""
+#membership = "IEEE fellow; ACM distinguished member"
+# address = "hchencs AT gmail.com"
+# cv = "pdf/cv.pdf"
 
 [extra.publication]
-prefix = ""
+prefix = "https://hchencs.github.io"
 # If author isn't empty, then highlight him/her in the author list.
 author = ""
 

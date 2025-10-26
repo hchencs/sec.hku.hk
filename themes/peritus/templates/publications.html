@@ -2,8 +2,7 @@
 
 {%- macro print_entry(entry) -%}
 {% set tags = entry.tags %}
-<li class="publist-item">
-    <a id="{{ entry.citation_key }}"></a><span class="publication-title">{{ tags.title | replace(from="{", to="") | replace(from="}", to="")
+<li class="publist-item"><a id="{{ entry.citation_key }}"></a><span class="publication-title">{{ tags.title | replace(from="{", to="") | replace(from="}", to="")
         }}</span>
     {%- if tags.addendum -%}
         {%- if tags.addendum | lower == "best paper award" %} <i class="fa-solid fa-award" title="Best paper award"></i>
@@ -38,8 +37,7 @@
 {%- if tags.doi %}
     doi = { {{- tags.doi | safe -}} },
 {%- endif %}
-}</code></pre></details>
-    <span class="publication-authors">
+}</code></pre></details><span class="publication-authors">
     {%- for author in tags.author | split(pat=" and ") -%}
         {%- if not loop.first -%}
             {%- if loop.last %} &amp; {%- else -%} , {%- endif -%}

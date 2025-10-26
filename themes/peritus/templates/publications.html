@@ -6,17 +6,13 @@
     <a id="{{ entry.citation_key }}"></a><span class="publication-title">{{ tags.title | replace(from="{", to="") | replace(from="}", to="")
         }}</span>
     {%- if tags.addendum -%}
-        {%- if tags.addendum | lower == "best paper award" -%}
-            <i class="fa-solid fa-award" title="Best paper award"></i>
+        {%- if tags.addendum | lower == "best paper award" %} <i class="fa-solid fa-award" title="Best paper award"></i>
         {%- endif -%}
     {%- endif -%}
-    {%- if tags.doi -%}
-        <a href="{{ tags.doi | safe }}"><i class="ai ai-doi" title="DOI"></i></a>
+    {%- if tags.doi %} <a href="{{ tags.doi | safe }}"><i class="ai ai-doi" title="DOI"></i></a>
     {%- endif -%}
-    {%- if not tags.nopdf -%}
-        <a href="{{ config.extra.publication.prefix | safe }}/publications/{{ entry.citation_key | lower }}.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a>
-    {%- endif -%}
-    <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTex"></i></summary><pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
+    {%- if not tags.nopdf %} <a href="{{ config.extra.publication.prefix | safe }}/publications/{{ entry.citation_key | lower }}.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a>
+    {%- endif %} <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTex"></i></summary><pre class="bib-data"><code class="select-all">@{{ entry.entry_type }}{ {{- entry.citation_key }},
     author = { {{- tags.author -}} },
     title = { {{- tags.title -}} },
 {%- if entry.entry_type == "inproceedings" %}  

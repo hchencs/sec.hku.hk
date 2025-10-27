@@ -15,7 +15,7 @@
             <div class="bio-section">
                 <!-- Display either banner or name -->
                 {% if config.extra.banner %}
-                <img src="{{ config.extra.banner }}" alt="{{ config.extra.banner_name }}" class="banner">
+                <img src="{{ config.extra.banner | safe }}" alt="{{ config.extra.banner_name }}" class="banner">
                 {% elif config.extra.name %}
                 <h1 class="name">{{ config.extra.name }}</h1>
                 {% endif %}

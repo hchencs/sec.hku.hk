@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong</title>
+    <meta name="description"
+        content="Our lab conducts research in computer and information security and machine learning.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://sec.hku.hk/style.css">
+
+    
+
+    <!-- Dynamic color configuration from config.toml -->
+    
+    <style>
+        :root {
+            --primary-color: #003660;
+            --secondary-color: #FEBC11;
+            --accent-color: #09847A;
+            --text-color: #3D4952;
+            --background-color: #ffffff;
+            --card-background: #ffffff;
+            --border-color: #DCE1E5;
+            --light-background: #EEF0F2;
+        }
+
+        .dark-mode {
+            --text-color: #DCE1E5;
+            --background-color: #111517;
+            --card-background: #1e1e1e;
+            --border-color: #333333 ;
+        }
+
+        /* Footer link styling */
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+    </style>
+    
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://sec.hku.hk/img/favicon.ico">
+
+    
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode'));
+        }
+
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Navigation links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/ " class="nav-link"><img src="/img/logo.svg"
+                            alt="JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong" width="300" style="padding-top: 1rem"></a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/research" class="nav-link">Research</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/publications" class="nav-link">Publications</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/people" class="nav-link">People</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/resources" class="nav-link">Resources</a>
+                </li>
+                
+                
+
+                
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+        
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <!-- Avatar section -->
+            
+
+            <!-- Bio section -->
+            <div class="bio-section">
+                <!-- Display either banner or name -->
+                
+                <img src="/img/logo.svg" alt="JC STEM Lab of Intelligent Cybersecurity" class="banner">
+                
+                
+                
+                
+                
+                
+                <div class="bio">
+                    <!-- <h3>About Me</h3>  -->
+                    <div><p>JC STEM Lab of Intelligent Cybersecurity, co-hosted by the <a href="https://datascience.hku.hk">Institute of Data Science</a> and <a href="https://www.cs.hku.hk">Department of Computer Science</a> of the <a href="https://hku.hk">University of Hong Kong</a>, was established in late 2024 with a generous donation from the <a href="https://charities.hkjc.com/charities/english/charities-trust/index.aspx">Hong Kong Jockey Club Charities Trust</a>.</p>
+<p>Our mission is to conduct cutting-edge research in the interdisciplinary area between computer/information security and machine learning. We endeavor to apply the latest methods and models in machine learning to security problems and to improve the security, privacy, and robustness of machine learning.</p>
+<p>The lab has state-of-the-art computing facilities, including 8 <a href="https://www.nvidia.com/en-us/data-center/h200/">Nvidia H200</a> and 8 <a href="https://www.nvidia.com/en-us/data-center/h100/">Nvidia H100</a> GPUs, and 130 TB SSD storage.</p>
+<p>We are recruiting researchers, postdoctoral scholars, graduate students, and interns who are passionate about exploring the frontier of cybersecurity and machine learning. Please send your CV to <code>chenho AT hku.hk</code></p>
+<h2 id="phd-recruitment-for-2026">PhD recruitment for 2026</h2>
+<p>We are recruiting PhD students for enrollment in 2026. We have multiple positions both in Hong Kong and <a href="https://www.cds.hku.hk/news/hku-signs-mou-with-shanghai-municipal-government-for-new-hku-cds-shanghai-campus-zhangjiang-hi-tech-park/">Shanghai</a>. If you have a high undergraduate GPA from a highly ranked university <em>or</em> have good research experience, we'd love to hear from you.</p>
+<p>Prior experience in cybersecurity is <em>not</em> mandatory. Past academic and research achievements are more indicative of successful future PhD study than the exact match of research topics. We are also expanding beyond cybersecurity into other AI application areas, such as AI for health.</p>
+</div>
+                </div>
+
+                <!-- Download CV button -->
+                
+
+                <!-- Social links and Info sections horizontally aligned -->
+                <div class="social-info-section">
+                    <!-- Social links -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 0.8em;">Last updated: 2025-11-15. Built with <a
+                    href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/jskaza/peritus">peritus</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function () {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>

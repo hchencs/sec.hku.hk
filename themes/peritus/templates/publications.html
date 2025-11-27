@@ -55,16 +55,14 @@
     {%- if entry.entry_type == "inproceedings" -%}
         <span class="publication-venue">{{ tags.booktitle | replace(from="\", to="") }}</span>, <span class="publication-year">{{ tags.date | truncate(length=4, end="") }}</span>
     {%- elif entry.entry_type == "article" -%}
-        <span class="publication-venue">{{ tags.journal | replace(from="\", to="") }}</span>, <span class="publication-volume">{{ tags.volume -}}</span>
-        {%- if tags.number -%}
-            .{{ tags.number }}
-        {%- endif -%}
-        (<span class="publication-year">{{ tags.year }}</span>)
+        <span class="publication-venue">{{ tags.journal | replace(from="\", to="") }}</span> <span class="publication-volume">{{ tags.volume -}}
+        </span>
         {%- if tags.pages -%}
-            , pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}
+            , {{ tags.pages | replace(from="--", to="&ndash;") | safe }}
         {%- endif -%}
+        <span class="publication-year"> ({{ tags.year }})</span>
     {%- elif entry.entry_type == "inbook" -%}
-        In <span class="publication-venue">{{ tags.booktitle | replace(from="\", to="") }}</span>, pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}. {{ tags.publisher }}, <span class="publication-year">{{ tags.year }}</span>
+        In <span class="publication-venue">{{ tags.booktitle | replace(from="\", to="") }}</span>, {{ tags.pages | replace(from="--", to="&ndash;") | safe }}, {{ tags.publisher }}, <span class="publication-year">{{ tags.year }}</span>
     {%- elif entry.entry_type == "misc" -%}
         <span class="publication-year">{{ tags.year }}</span>
     {%- endif -%}
@@ -151,7 +149,7 @@
     }
 
     .publication-year {
-        font-weight: 600;
+        // font-weight: 600;
         color: var(--text-color);
     }
 
@@ -162,6 +160,7 @@
 
     .publication-volume {
         color: var(--text-color);
+        font-weight: 600;
     }
 
     .publication-authors {
@@ -171,7 +170,7 @@
     }
 
     .author {
-        font-weight: 500;
+        // font-weight: 500;
     }
 
     .highlighted-author {

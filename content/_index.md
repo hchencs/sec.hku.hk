@@ -1,11 +1,11 @@
 +++
 +++
 
-JC STEM Lab of Intelligent Cybersecurity, co-hosted by the [Institute of Data Science](https://datascience.hku.hk) and [Department of Computer Science](https://www.cs.hku.hk) of the [University of Hong Kong](https://hku.hk), was established in late 2024 with a generous donation from the [Hong Kong Jockey Club Charities Trust](https://charities.hkjc.com/charities/english/charities-trust/index.aspx).
+JC STEM Lab of Intelligent Cybersecurity, co-hosted by the [School of Computing and Data Science](https://www.cds.hku.hk/) of the [University of Hong Kong](https://hku.hk), was established with generous donations from the [Hong Kong Jockey Club Charities Trust](https://charities.hkjc.com/charities/english/charities-trust/index.aspx) and other organizations and corporations.
 
 Our mission is to conduct cutting-edge research in the interdisciplinary area between computer/information security and machine learning. We endeavor to apply the latest methods and models in machine learning to security problems and to improve the security, privacy, and robustness of machine learning.
 
-The lab has state-of-the-art computing facilities, including 8 [Nvidia H200](https://www.nvidia.com/en-us/data-center/h200/) and 8 [Nvidia H100](https://www.nvidia.com/en-us/data-center/h100/) GPUs, and 130 TB SSD storage.
+The lab has state-of-the-art computing facilities, including 8 [Nvidia H200](https://www.nvidia.com/en-us/data-center/h200/) and 8 [Nvidia H100](https://www.nvidia.com/en-us/data-center/h100/) GPUs, 130 TB SSD storage, and abundant cloud computing resources.
 
 We are recruiting researchers, postdoctoral scholars, graduate students, and interns who are passionate about exploring the frontier of cybersecurity and machine learning. Please send your CV to `chenho AT hku.hk`
 

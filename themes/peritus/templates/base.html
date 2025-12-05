@@ -79,23 +79,22 @@
         <div class="nav-container">
             <!-- Mobile menu button -->
             <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span><i class="fa fa-bars"></i></span>
             </div>
 
+            <div class="nav-item">
+                <a href="{{ get_url(path=" /") }}" class="nav-link">
+                    {%- if config.extra.home_icon -%}
+                    <img src="{{ config.extra.home_icon | safe }}"
+                        alt="{{ config.title }}" width="300" style="padding-top: 1rem">
+                    {%- else -%}
+                        <i class="fas fa-home"></i>
+                    {%- endif -%}
+                </a>
+            </div>
+            
             <!-- Navigation links -->
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="{{ get_url(path=" /") }}" class="nav-link">
-                        {%- if config.extra.home_icon -%}
-                        <img src="{{ config.extra.home_icon | safe }}"
-                            alt="{{ config.title }}" width="300" style="padding-top: 1rem">
-                        {%- else -%}
-                            <i class="fas fa-home"></i>
-                        {%- endif -%}
-                    </a>
-                </li>
                 {% if config.extra.menu %}
                 {% for item in config.extra.menu %}
                 <li class="nav-item">

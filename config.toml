@@ -20,9 +20,9 @@ enable_search = false
 # Left avatar
 # avatar = ""
 # Top banner
-banner = "/img/logo.svg"
+# banner = "/img/logo.svg"
 # Alt text of banner
-banner_name = "JC STEM Lab of Intelligent Cybersecurity"
+# banner_name = "JC STEM Lab of Intelligent Cybersecurity"
 # If unset, use the default home icon
 home_icon = "/img/logo.svg"
 

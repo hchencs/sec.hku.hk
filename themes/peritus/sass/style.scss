@@ -113,7 +113,7 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 90px;
 }
 
 .nav-brand a {
@@ -179,26 +179,6 @@ summary {
 
   @media (max-width: 768px) {
     display: flex;
-  }
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 3px 0;
-    transition: 0.3s;
-  }
-
-  &.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.is-active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  &.is-active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
   }
 }
 

@@ -25,8 +25,11 @@ page_template = "page.html"
 - [Rust](https://doc.rust-lang.org/book/)
 
 ### Textbooks
-- [Introduction to Algorithms](http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) [(Download)](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf)
-- [Operating Systems: Principles and Practice](https://ospp.cs.washington.edu/) [(Download)](https://www.kea.nu/files/textbooks/ospp/)
+#### Computer science
+- [Introduction to Algorithms](http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ([Download](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf))
+- [Operating Systems: Principles and Practice](https://ospp.cs.washington.edu/) ([Download](https://www.kea.nu/files/textbooks/ospp/))
 - [All of Statistics](https://www.stat.cmu.edu/~brian/valerie/617-2022/0%20-%20books/2004%20-%20wasserman%20-%20all%20of%20statistics.pdf)
 - [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://hastie.su.domains/ElemStatLearn/)
 - [Computer Security](https://textbook.cs161.org/)
+#### Biology
+- [Molecular Biology of the Cell](https://www.amazon.com/Molecular-Biology-Seventh-Bruce-Alberts-ebook/dp/B09J327GMT) ([Download](https://www.scribd.com/document/872762239/Molecular-Biology-of-the-Cell-7th-Edition-pdf))

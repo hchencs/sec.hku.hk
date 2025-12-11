@@ -5,10 +5,9 @@ JC STEM Lab of Intelligent Cybersecurity, co-hosted by the [School of Computing 
 
 Our mission is to conduct cutting-edge research in the interdisciplinary area between computer/information security and machine learning. We endeavor to apply the latest methods and models in machine learning to security problems and to improve the security, privacy, and robustness of machine learning.
 
-Our newest endeavor ventures into AI for biological sciences in collaboration with 
-[Lab of Mechanobiology in Diseases](http://english.cemcs.cas.cn/sourcedb/ywrck/pi/202405/t20240527_663450.html), Center for Excellence in Molecular Cell Science (Shanghai Institute of Biochemistry and Cell Biology), Chinese Academy of Sciences.
+Our newest endeavor ventures into AI for biological sciences in collaboration with [Lab of Mechanobiology in Diseases](http://english.cemcs.cas.cn/sourcedb/ywrck/pi/202405/t20240527_663450.html), Center for Excellence in Molecular Cell Science, Chinese Academy of Sciences.
 
-The lab has state-of-the-art computing facilities, including [Nvidia H200](https://www.nvidia.com/en-us/data-center/h200/) and [Nvidia H100](https://www.nvidia.com/en-us/data-center/h100/) GPU clusters, and abundant cloud computing resources.
+The lab has state-of-the-art computing facilities, including Nvidia H200 and H100 GPU clusters and abundant cloud computing resources.
 
 We are recruiting researchers, postdoctoral scholars, graduate students, and interns who are passionate about exploring the frontier of cybersecurity, machine learning, and AI for biological sciences. Please send your CV to `chenho AT hku.hk`
 

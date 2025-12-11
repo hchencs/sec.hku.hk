@@ -236,21 +236,12 @@
             <h1>{{ page.title }}</h1>
         </div>
 
-        <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
+        <!-- <p>Jump to <a href="#inbook">books</a>, <a href="#misc">preprints</a></p> -->
         {% set data = load_data(path="data/publications/paper.bib", format="bibtex") %}
-        <h2>Conferences</h2>
+        <h2>Peer-reviewed articles</h2>
         <ul class="publist">
             {%- for entry in data.bibliographies -%}
-                {%- if entry.entry_type == "inproceedings" -%}
-                    {{ self::print_entry(entry=entry) }}
-                {%- endif -%}
-            {%- endfor -%}
-        </ul>
-        <a id="article"></a>
-        <h2>Journals</h2>
-        <ul class="publist">
-            {%- for entry in data.bibliographies -%}
-                {%- if entry.entry_type == "article" -%}
+                {%- if entry.entry_type == "inproceedings" or entry.entry_type == "article" -%}
                     {{ self::print_entry(entry=entry) }}
                 {%- endif -%}
             {%- endfor -%}

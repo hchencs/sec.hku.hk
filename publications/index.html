@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Publications | JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong</title>
+    <meta name="description"
+        content="Our lab conducts research in computer and information security and machine learning.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://sec.hku.hk/style.css">
+
+    
+<style>
+    .publications-metadata {
+        max-width: 800px;
+        margin: 1rem auto 2rem auto;
+        padding: 1rem;
+        background: var(--secondary-background, #f8f9fa);
+        border-left: 4px solid var(--primary-color, #007bff);
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    .metadata-info {
+        margin: 0;
+        color: var(--text-secondary, #6c757d);
+    }
+
+    .metadata-label {
+        font-weight: 600;
+        color: var(--text-color, #212529);
+    }
+
+    .metadata-separator {
+        margin: 0 0.5rem;
+        color: var(--text-secondary, #6c757d);
+    }
+
+    .metadata-info a {
+        color: var(--primary-color, #007bff);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .metadata-info a:hover {
+        text-decoration: underline;
+    }
+
+    .publications-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .publication-item {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: var(--card-background);
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+    .publication-item:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--hover-shadow);
+    }
+
+    .publication-title {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .publication-title a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .publication-title a:hover {
+        text-decoration: underline;
+    }
+
+    .publication-meta {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    .publication-year {
+        color: var(--text-color);
+    }
+
+    .publication-venue {
+        font-style: italic;
+        color: var(--text-color);
+    }
+
+    .publication-volume {
+        color: var(--text-color);
+        font-weight: 600;
+    }
+
+    .publication-authors {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    .highlighted-author {
+        color: #FEBC11;
+        font-weight: 600;
+    }
+
+    .publication-abstract details {
+        margin-top: 1rem;
+    }
+
+    .publication-abstract summary {
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--text-color);
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .publication-abstract summary:hover {
+        color: var(--primary-color);
+    }
+
+    .publication-abstract p {
+        margin: 0.5rem 0 0 0;
+        padding: 0.5rem 0;
+        line-height: 1.6;
+        color: var(--text-color);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .publication-footer {
+        margin-top: 1rem;
+    }
+
+    .publication-link {
+        padding: 0.5rem 1rem;
+        background-color: var(--border-color);
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .publication-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .publication-item {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+
+    <!-- Dynamic color configuration from config.toml -->
+    
+    <style>
+        :root {
+            --primary-color: #003660;
+            --secondary-color: #FEBC11;
+            --accent-color: #09847A;
+            --text-color: #3D4952;
+            --background-color: #ffffff;
+            --card-background: #ffffff;
+            --border-color: #DCE1E5;
+            --light-background: #EEF0F2;
+        }
+
+        .dark-mode {
+            --text-color: #DCE1E5;
+            --background-color: #111517;
+            --card-background: #1e1e1e;
+            --border-color: #333333 ;
+        }
+
+        /* Footer link styling */
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+    </style>
+    
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://sec.hku.hk/img/favicon.ico">
+
+    
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode'));
+        }
+
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span><i class="fa fa-bars"></i></span>
+            </div>
+
+            <div class="nav-item">
+                <a href="https://sec.hku.hk/ " class="nav-link"><img src="/img/logo.svg"
+                        alt="JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong" width="300" style="padding-top: 1rem"></a>
+            </div>
+            
+            <!-- Navigation links -->
+            <ul class="nav-menu" id="nav-menu">
+                
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/research" class="nav-link">Research</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/publications" class="nav-link">Publications</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/people" class="nav-link">People</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/resources" class="nav-link">Resources</a>
+                </li>
+                
+                
+
+                
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+        
+<div class="section-template">
+    <div class="container">
+        <div class="section-header">
+            <h1>Publications</h1>
+        </div>
+
+        <!-- <p>Jump to <a href="#inbook">books</a>, <a href="#misc">preprints</a></p> -->
+        
+        <h2>Peer-reviewed articles</h2>
+        <ul class="publist">
+<li class="publist-item"><a id="li2025bayesian"></a><span class="publication-title">Improving Transferability of Adversarial Examples via Bayesian Attacks</span> <a href="https://doi.org/10.1109/TCSVT.2025.3609284"><i class="ai ai-doi" title="DOI"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{li2025bayesian,
+    author = {Li, Qizhang and Guo, Yiwen and Yang, Xiaochen and Zuo, Wangmeng and Chen, Hao},
+    title = {Improving Transferability of Adversarial Examples via Bayesian Attacks},
+    journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+    year = {2025},
+    volume = {},
+    doi = {https://doi.org/10.1109/TCSVT.2025.3609284},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Yang, X.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Transactions on Circuits and Systems for Video Technology</span> <span class="publication-volume"></span><span class="publication-year"> (2025)</span></li>
+<li class="publist-item"><a id="he2025tfbench"></a><span class="publication-title">Evaluating Program Semantics Reasoning with Type Inference in System F</span> <a href="https://hchencs.github.io/publications/he2025tfbench.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{he2025tfbench,
+    author = {He, Yifeng and Yang, Luning and Gonzalo, Christopher and Chen, Hao},
+    title = {Evaluating Program Semantics Reasoning with Type Inference in System F},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2025-11-30&#x2F;2025-12-07},
+    address = {San Diego, CA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">He, Y.</span>, <span class="author">Yang, L.</span>, <span class="author">Gonzalo, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="he2025fuzzaug"></a><span class="publication-title">FuzzAug: Data Augmentation by Coverage-guided Fuzzing for Neural Test Generation</span> <a href="https://hchencs.github.io/publications/he2025fuzzaug.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{he2025fuzzaug,
+    author = {He, Yifeng and Wang, Jicheng and Rong, Yuyang and Chen, Hao},
+    title = {FuzzAug: Data Augmentation by Coverage-guided Fuzzing for Neural Test Generation},  
+    booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    date = {2025-11-05&#x2F;2025-11-09},
+    address = {Suzhou, China},
+}</code></pre></details><span class="publication-authors"><span class="author">He, Y.</span>, <span class="author">Wang, J.</span>, <span class="author">Rong, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP)</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="zhang2025halluciation"></a><span class="publication-title">Active Layer-Contrastive Decoding Reduces Hallucination in Large Language Model Generation</span> <a href="https://hchencs.github.io/publications/zhang2025halluciation.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{zhang2025halluciation,
+    author = {Zhang, Hongxiang and Chen, Hao and Chen, Muhao and Zhang, Tianyi},
+    title = {Active Layer-Contrastive Decoding Reduces Hallucination in Large Language Model Generation},  
+    booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    date = {2025-11-05&#x2F;2025-11-09},
+    address = {Suzhou, China},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhang, H.</span>, <span class="author">Chen, H.</span>, <span class="author">Chen, M.</span> &amp; <span class="author">Zhang, T.</span></span><br><span class="publication-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP)</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="liu2025agent"></a><span class="publication-title">Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents</span> <a href="https://hchencs.github.io/publications/liu2025agent.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liu2025agent,
+    author = {Liu, Fengyu and Zhang, Yuan and Luo, Jiaqi and Dai, Jiarun and Chen, Tian and Yuan, Letian and Yu, Zhengmin and Shi, Youkun and Li, Ke and Zhou, Chengyuan and Chen, Hao and Yang, Min},
+    title = {Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents},  
+    booktitle = {USENIX Security Symposium},
+    date = {2025-08-13&#x2F;2025-08-15},
+    address = {Seattle, WA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, F.</span>, <span class="author">Zhang, Y.</span>, <span class="author">Luo, J.</span>, <span class="author">Dai, J.</span>, <span class="author">Chen, T.</span>, <span class="author">Yuan, L.</span>, <span class="author">Yu, Z.</span>, <span class="author">Shi, Y.</span>, <span class="author">Li, K.</span>, <span class="author">Zhou, C.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Yang, M.</span></span><br><span class="publication-venue">USENIX Security Symposium</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="he2025aiagent"></a><span class="publication-title">Security of AI Agents</span> <a href="https://hchencs.github.io/publications/he2025aiagent.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{he2025aiagent,
+    author = {He, Yifeng and Wang, Ethan and Rong, Yuyang and Cheng, Zifei and Chen, Hao},
+    title = {Security of AI Agents},  
+    booktitle = {IEEE&#x2F;ACM International Workshop on Responsible AI Engineering (RAIE)},
+    date = {2025-04-29},
+    address = {Ottawa, Ontario, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">He, Y.</span>, <span class="author">Wang, E.</span>, <span class="author">Rong, Y.</span>, <span class="author">Cheng, Z.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE&#x2F;ACM International Workshop on Responsible AI Engineering (RAIE)</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="rong2025irfuzzer"></a><span class="publication-title">IRFuzzer: Specialized Fuzzing for LLVM Backend Code Generation</span> <a href="https://hchencs.github.io/publications/rong2025irfuzzer.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{rong2025irfuzzer,
+    author = {Rong, Yuyang and Yu, Zhanghan and Weng, Zhenkai and Neuendorffer, Stephen and Chen, Hao},
+    title = {IRFuzzer: Specialized Fuzzing for LLVM Backend Code Generation},  
+    booktitle = {IEEE&#x2F;ACM International Conference on Software Engineering (ICSE)},
+    date = {2025-04-27&#x2F;2025-05-03},
+    address = {Ottawa, Ontario, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">Rong, Y.</span>, <span class="author">Yu, Z.</span>, <span class="author">Weng, Z.</span>, <span class="author">Neuendorffer, S.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE&#x2F;ACM International Conference on Software Engineering (ICSE)</span>, <span class="publication-year">2025</span></li>
+<li class="publist-item"><a id="rong2024Valkyrie"></a><span class="publication-title">Valkyrie: Improving Fuzzing Performance Through Deterministic Techniques</span> <a href="https://doi.org/10.1016/j.jss.2023.111886"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/rong2024valkyrie.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{rong2024Valkyrie,
+    author = {Rong, Yuyang and Zhang, Chibin and Liu, Jianzhong and Chen, Hao},
+    title = {Valkyrie: Improving Fuzzing Performance Through Deterministic Techniques},
+    journal = {Journal of Systems and Software},
+    year = {2024},
+    volume = {209},
+    doi = {https://doi.org/10.1016/j.jss.2023.111886},
+}</code></pre></details><span class="publication-authors"><span class="author">Rong, Y.</span>, <span class="author">Zhang, C.</span>, <span class="author">Liu, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Journal of Systems and Software</span> <span class="publication-volume">209</span><span class="publication-year"> (2024)</span></li>
+<li class="publist-item"><a id="li2024llm"></a><span class="publication-title">Improved Generation of Adversarial Examples Against Safety-aligned LLMs</span> <a href="https://hchencs.github.io/publications/li2024llm.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2024llm,
+    author = {Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+    title = {Improved Generation of Adversarial Examples Against Safety-aligned LLMs},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2024-12-09&#x2F;2024-12-15},
+    address = {Vancouver, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="huang2024"></a><span class="publication-title">Code Representation Pre-training with Complements from Program Executions</span> <a href="https://hchencs.github.io/publications/huang2024.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{huang2024,
+    author = {Huang, Jiabo and Zhao, Jianyu and Rong, Yuyang and Guo, Yiwen and He, Yifeng and Chen, Hao},
+    title = {Code Representation Pre-training with Complements from Program Executions},  
+    booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    date = {2024-11-12&#x2F;2024-11-16},
+    address = {Miami, Florida, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Huang, J.</span>, <span class="author">Zhao, J.</span>, <span class="author">Rong, Y.</span>, <span class="author">Guo, Y.</span>, <span class="author">He, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="xiong2024"></a><span class="publication-title">The Program Testing Ability of Large Language Models for Code</span> <a href="https://hchencs.github.io/publications/xiong2024.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{xiong2024,
+    author = {Xiong, Weimin and Guo, Yiwen and Chen, Hao},
+    title = {The Program Testing Ability of Large Language Models for Code},  
+    booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    date = {2024-11-12&#x2F;2024-11-16},
+    address = {Miami, Florida, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Xiong, W.</span>, <span class="author">Guo, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="lyu2024PromptFuzz"></a><span class="publication-title">Prompt Fuzzing for Fuzz Driver Generation</span> <a href="https://hchencs.github.io/publications/lyu2024promptfuzz.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{lyu2024PromptFuzz,
+    author = {Lyu, Yunlong and Xie, Yuxuan and Chen, Peng and Chen, Hao},
+    title = {Prompt Fuzzing for Fuzz Driver Generation},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2024-10-14&#x2F;2024-10-18},
+    address = {Salt Lake City, UT, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Lyu, Y.</span>, <span class="author">Xie, Y.</span>, <span class="author">Chen, P.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="he2024unitsyn"></a><span class="publication-title">UniTSyn: A Large-Scale Dataset Capable of Enhancing the Prowess of Large Language Models for Program Testing</span> <a href="https://hchencs.github.io/publications/he2024unitsyn.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{he2024unitsyn,
+    author = {He, Yifeng and Huang, Jiabo and Rong, Yuyang and Guo, Yiwen and Wang, Ethan and Chen, Hao},
+    title = {UniTSyn: A Large-Scale Dataset Capable of Enhancing the Prowess of Large Language Models for Program Testing},  
+    booktitle = {International Symposium on Software Testing and Analysis (ISSTA)},
+    date = {2024-09-16&#x2F;2024-09-20},
+    address = {Vienna, Austria},
+}</code></pre></details><span class="publication-authors"><span class="author">He, Y.</span>, <span class="author">Huang, J.</span>, <span class="author">Rong, Y.</span>, <span class="author">Guo, Y.</span>, <span class="author">Wang, E.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Symposium on Software Testing and Analysis (ISSTA)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="lin2024IDS"></a><span class="publication-title">Intrusion Detection at Scale with the Assistance of a Command-line Language Model</span> <a href="https://hchencs.github.io/publications/lin2024ids.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{lin2024IDS,
+    author = {Lin, Jiongliang and Guo, Yiwen and Chen, Hao},
+    title = {Intrusion Detection at Scale with the Assistance of a Command-line Language Model},  
+    booktitle = {Annual IEEE&#x2F;IFIP International Conference on Dependable Systems and Networks (DSN)},
+    date = {2024-06-24&#x2F;2024-06-27},
+    address = {Brisbane, Australia},
+}</code></pre></details><span class="publication-authors"><span class="author">Lin, J.</span>, <span class="author">Guo, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Annual IEEE&#x2F;IFIP International Conference on Dependable Systems and Networks (DSN)</span>, <span class="publication-year">2024</span></li>
+<li class="publist-item"><a id="li2023Attack"></a><span class="publication-title">Towards Evaluating Transfer-based Attacks Systematically, Practically, and Fairly</span> <a href="https://hchencs.github.io/publications/li2023attack.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2023Attack,
+    author = {Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+    title = {Towards Evaluating Transfer-based Attacks Systematically, Practically, and Fairly},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2023-12-10&#x2F;2023-12-16},
+    address = {New Orleans, LA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="li2023ILPD"></a><span class="publication-title">Improving Adversarial Transferability via Intermediate-level Perturbation Decay</span> <a href="https://hchencs.github.io/publications/li2023ilpd.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2023ILPD,
+    author = {Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+    title = {Improving Adversarial Transferability via Intermediate-level Perturbation Decay},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2023-12-10&#x2F;2023-12-16},
+    address = {New Orleans, LA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="chen2023Hopper"></a><span class="publication-title">HOPPER: Interpretative Fuzzing for Libraries</span> <a href="https://doi.org/10.1145/3576915.3616610"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/chen2023hopper.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2023Hopper,
+    author = {Chen, Peng and Xie, Yuxuan and Lyu, Yunlong and Wang, Yuxiao and Chen, Hao},
+    title = {HOPPER: Interpretative Fuzzing for Libraries},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2023-11-26&#x2F;2023-11-30},
+    address = {Copenhagen, Denmark},
+    doi = {https://doi.org/10.1145/3576915.3616610},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, P.</span>, <span class="author">Xie, Y.</span>, <span class="author">Lyu, Y.</span>, <span class="author">Wang, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="lin2023MHCN"></a><span class="publication-title">MHCN: a Hyperbolic Neural Network Model for Multi-view Hierarchical Clustering</span> <a href="https://hchencs.github.io/publications/lin2023mhcn.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{lin2023MHCN,
+    author = {Lin, Fangfei and Bai, Bing and Guo, Yiwen and Chen, Hao and Ren, Yazhou and Xu, Zenglin},
+    title = {MHCN: a Hyperbolic Neural Network Model for Multi-view Hierarchical Clustering},  
+    booktitle = {International Conference on Computer Vision (ICCV)},
+    date = {2023-10-04&#x2F;2023-10-06},
+    address = {Paris, France},
+}</code></pre></details><span class="publication-authors"><span class="author">Lin, F.</span>, <span class="author">Bai, B.</span>, <span class="author">Guo, Y.</span>, <span class="author">Chen, H.</span>, <span class="author">Ren, Y.</span> &amp; <span class="author">Xu, Z.</span></span><br><span class="publication-venue">International Conference on Computer Vision (ICCV)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="zhao2023"></a><span class="publication-title">Understanding Programs by Exploiting (Fuzzing) Test Cases</span> <a href="https://hchencs.github.io/publications/zhao2023.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{zhao2023,
+    author = {Zhao, Jianyu and Rong, Yuyang and Guo, Yiwen and He, Yifeng and Chen, Hao},
+    title = {Understanding Programs by Exploiting (Fuzzing) Test Cases},  
+    booktitle = {Findings of the Association for Computational Linguistics (ACL)},
+    date = {2023-07-09&#x2F;2023-07-14},
+    address = {Toronto, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhao, J.</span>, <span class="author">Rong, Y.</span>, <span class="author">Guo, Y.</span>, <span class="author">He, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Findings of the Association for Computational Linguistics (ACL)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="li2023Squeeze"></a><span class="publication-title">Squeeze Training for Adversarial Robustness</span> <a href="https://hchencs.github.io/publications/li2023squeeze.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2023Squeeze,
+    author = {Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+    title = {Squeeze Training for Adversarial Robustness},  
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    date = {2023-05-01&#x2F;2023-05-05},
+    address = {Kigali, Rwanda},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="li2023Bayesian"></a><span class="publication-title">Making Substitute Models More Bayesian Can Enhance Transferability of Adversarial Examples</span> <a href="https://hchencs.github.io/publications/li2023bayesian.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2023Bayesian,
+    author = {Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+    title = {Making Substitute Models More Bayesian Can Enhance Transferability of Adversarial Examples},  
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    date = {2023-05-01&#x2F;2023-05-05},
+    address = {Kigali, Rwanda},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-year">2023</span></li>
+<li class="publist-item"><a id="du2022AFLIoT"></a><span class="publication-title">AflIot: Fuzzing on Linux-based IoT Device with Binary-Level Instrumentation</span> <a href="https://doi.org/10.1016/j.cose.2022.102889"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/du2022afliot.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{du2022AFLIoT,
+    author = {Du, Xuechao and Chen, Andong and He, Boyuan and Chen, Hao and Zhang, Fan and Chen, Yan},
+    title = {AflIot: Fuzzing on Linux-based IoT Device with Binary-Level Instrumentation},
+    journal = {Computers \&amp; Security},
+    year = {2022},
+    volume = {122},
+    doi = {https://doi.org/10.1016/j.cose.2022.102889},
+}</code></pre></details><span class="publication-authors"><span class="author">Du, X.</span>, <span class="author">Chen, A.</span>, <span class="author">He, B.</span>, <span class="author">Chen, H.</span>, <span class="author">Zhang, F.</span> &amp; <span class="author">Chen, Y.</span></span><br><span class="publication-venue">Computers &amp; Security</span> <span class="publication-volume">122</span><span class="publication-year"> (2022)</span></li>
+<li class="publist-item"><a id="guo2022ILA"></a><span class="publication-title">An Intermediate-level Attack Framework on The Basis of Linear Regression</span> <a href="https://doi.org/10.1109/TPAMI.2022.3188044"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/guo2022ila.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{guo2022ILA,
+    author = {Guo, Yiwen and Li, Qizhang and Zuo, Wangmeng and Chen, Hao},
+    title = {An Intermediate-level Attack Framework on The Basis of Linear Regression},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year = {2022},
+    volume = {45},
+    number = {3},
+    doi = {https://doi.org/10.1109/TPAMI.2022.3188044},
+}</code></pre></details><span class="publication-authors"><span class="author">Guo, Y.</span>, <span class="author">Li, Q.</span>, <span class="author">Zuo, W.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence</span> <span class="publication-volume">45</span>, 2726&ndash;2735<span class="publication-year"> (2022)</span></li>
+<li class="publist-item"><a id="liu2022ConcSpectre"></a><span class="publication-title">ConcSpectre: Be Aware of Forthcoming Malware Hidden in Concurrent Programs</span> <a href="https://doi.org/10.1109/TR.2022.3162694"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/liu2022concspectre.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{liu2022ConcSpectre,
+    author = {Liu, Yang and Xu, Zisen and Fan, Ming and Hao, Yu and Chen, Kai and Chen, Hao and Cai, Yan and Yang, Zijiang and Liu, Ting},
+    title = {ConcSpectre: Be Aware of Forthcoming Malware Hidden in Concurrent Programs},
+    journal = {IEEE Transactions on Reliability},
+    year = {2022},
+    volume = {71},
+    number = {2},
+    doi = {https://doi.org/10.1109/TR.2022.3162694},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, Y.</span>, <span class="author">Xu, Z.</span>, <span class="author">Fan, M.</span>, <span class="author">Hao, Y.</span>, <span class="author">Chen, K.</span>, <span class="author">Chen, H.</span>, <span class="author">Cai, Y.</span>, <span class="author">Yang, Z.</span> &amp; <span class="author">Liu, T.</span></span><br><span class="publication-venue">IEEE Transactions on Reliability</span> <span class="publication-volume">71</span>, 1174&ndash;1188<span class="publication-year"> (2022)</span></li>
+<li class="publist-item"><a id="rong2022Valkyrie"></a><span class="publication-title">Valkyrie: Improving Fuzzing Performance Through Deterministic Techniques</span> <i class="fa-solid fa-award" title="Best paper award"></i> <a href="https://doi.org/10.1109/QRS57517.2022.00069"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/rong2022valkyrie.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{rong2022Valkyrie,
+    author = {Rong, Yuyang and Zhang, Chibin and Liu, Jianzhong and Chen, Hao},
+    title = {Valkyrie: Improving Fuzzing Performance Through Deterministic Techniques},  
+    booktitle = {IEEE International Conference on Software Quality, Reliability, and Security (QRS)},
+    date = {2022-12-05&#x2F;2022-12-09},
+    address = {Guangzhou, China},
+    doi = {https://doi.org/10.1109/QRS57517.2022.00069},
+}</code></pre></details><span class="publication-authors"><span class="author">Rong, Y.</span>, <span class="author">Zhang, C.</span>, <span class="author">Liu, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE International Conference on Software Quality, Reliability, and Security (QRS)</span>, <span class="publication-year">2022</span></li>
+<li class="publist-item"><a id="chen2022MIA"></a><span class="publication-title">Membership Inference Attack in Face of Data Transformations</span> <a href="https://hchencs.github.io/publications/chen2022mia.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2022MIA,
+    author = {Chen, Jiyu and Guo, Yiwen and Chen, Hao and Gong, Neil},
+    title = {Membership Inference Attack in Face of Data Transformations},  
+    booktitle = {IEEE Conference on Communications and Network Security (CNS)},
+    date = {2022-10-03&#x2F;2022-10-05},
+    address = {Austin, TX, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, J.</span>, <span class="author">Guo, Y.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Gong, N.</span></span><br><span class="publication-venue">IEEE Conference on Communications and Network Security (CNS)</span>, <span class="publication-year">2022</span></li>
+<li class="publist-item"><a id="liu2022DAUC"></a><span class="publication-title">Task-optimized User Clustering based on Mobile App Usage for Cold-start Recommendations</span> <a href="https://hchencs.github.io/publications/liu2022dauc.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liu2022DAUC,
+    author = {Liu, Bulou and Bai, Bing and Xie, Weibang and Guo, Yiwen and Chen, Hao},
+    title = {Task-optimized User Clustering based on Mobile App Usage for Cold-start Recommendations},  
+    booktitle = {ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+    date = {2022-08-14&#x2F;2022-08-18},
+    address = {Washington DC, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, B.</span>, <span class="author">Bai, B.</span>, <span class="author">Xie, W.</span>, <span class="author">Guo, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM SIGKDD Conference on Knowledge Discovery and Data Mining</span>, <span class="publication-year">2022</span></li>
+<li class="publist-item"><a id="jiang2022Feder"></a><span class="publication-title">Feder: communication-efficient byzantine-robust federated learning</span> <a href="https://hchencs.github.io/publications/jiang2022feder.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{jiang2022Feder,
+    author = {Jiang, Yukun and Cao, Xiaoyu and Chen, Hao and Gong, Neil},
+    title = {Feder: communication-efficient byzantine-robust federated learning},  
+    booktitle = {ICLR Workshop on Socially Responsible Machine Learning (SRML)},
+    date = {2022-04-29&#x2F;2022-04-29},
+}</code></pre></details><span class="publication-authors"><span class="author">Jiang, Y.</span>, <span class="author">Cao, X.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Gong, N.</span></span><br><span class="publication-venue">ICLR Workshop on Socially Responsible Machine Learning (SRML)</span>, <span class="publication-year">2022</span></li>
+<li class="publist-item"><a id="chen2021Privacy"></a><span class="publication-title">Protect Privacy of Deep Classification Networks by Exploiting Their Generative Power</span> <a href="https://doi.org/10.1007/s10994-021-05951-6"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/chen2021privacy.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{chen2021Privacy,
+    author = {Chen, Jiyu and Guo, Yiwen and Zheng, Qianjun and Chen, Hao},
+    title = {Protect Privacy of Deep Classification Networks by Exploiting Their Generative Power},
+    journal = {Machine Learning},
+    year = {2021},
+    volume = {110},
+    doi = {https://doi.org/10.1007/s10994-021-05951-6},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, J.</span>, <span class="author">Guo, Y.</span>, <span class="author">Zheng, Q.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Machine Learning</span> <span class="publication-volume">110</span>, 651&ndash;674<span class="publication-year"> (2021)</span></li>
+<li class="publist-item"><a id="liu2021ConcSpectre"></a><span class="publication-title">ConcSpectre: Be Aware of Forthcoming Malware Hidden in Concurrent Programs</span> <i class="fa-solid fa-award" title="Best paper award"></i> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liu2021ConcSpectre,
+    author = {Liu, Yang and Fan, Ming and Liu, Ting and Hao, Yu and Xu, Zisen and Chen, Kai and Chen, Hao and Cai, Yan},
+    title = {ConcSpectre: Be Aware of Forthcoming Malware Hidden in Concurrent Programs},  
+    booktitle = {IEEE International Conference on Software Quality, Reliability, and Security (QRS)},
+    date = {2021-12-06&#x2F;2021-12-10},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, Y.</span>, <span class="author">Fan, M.</span>, <span class="author">Liu, T.</span>, <span class="author">Hao, Y.</span>, <span class="author">Xu, Z.</span>, <span class="author">Chen, K.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Cai, Y.</span></span><br><span class="publication-venue">IEEE International Conference on Software Quality, Reliability, and Security (QRS)</span>, <span class="publication-year">2021</span></li>
+<li class="publist-item"><a id="liu2021Go"></a><span class="publication-title">Automatically Detecting and Fixing Concurrency Bugs in Go Software Systems</span> <a href="https://hchencs.github.io/publications/liu2021go.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liu2021Go,
+    author = {Liu, Ziheng and Zhu, Shuofei and Qin, Boqin and Chen, Hao and Song, Linhai},
+    title = {Automatically Detecting and Fixing Concurrency Bugs in Go Software Systems},  
+    booktitle = {International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)},
+    date = {2021-04-19&#x2F;2021-04-23},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, Z.</span>, <span class="author">Zhu, S.</span>, <span class="author">Qin, B.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Song, L.</span></span><br><span class="publication-venue">International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)</span>, <span class="publication-year">2021</span></li>
+<li class="publist-item"><a id="guo2020Linear"></a><span class="publication-title">Backpropagating Linearly Improves Transferability of Adversarial Examples</span> <a href="https://hchencs.github.io/publications/guo2020linear.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{guo2020Linear,
+    author = {Guo, Yiwen and Li, Qizhang and Chen, Hao},
+    title = {Backpropagating Linearly Improves Transferability of Adversarial Examples},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2020-12-06&#x2F;2020-12-12},
+}</code></pre></details><span class="publication-authors"><span class="author">Guo, Y.</span>, <span class="author">Li, Q.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="li2020NoBox"></a><span class="publication-title">Practical No-box Adversarial Attacks against DNNs</span> <a href="https://hchencs.github.io/publications/li2020nobox.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2020NoBox,
+    author = {Li, Qizhang and Guo, Yiwen and Chen, Hao},
+    title = {Practical No-box Adversarial Attacks against DNNs},  
+    booktitle = {Neural Information Processing Systems (NeurIPS)},
+    date = {2020-12-06&#x2F;2020-12-12},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Neural Information Processing Systems (NeurIPS)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="rong2020Integrity"></a><span class="publication-title">Integrity: Finding Integer Errors by Targeted Fuzzing</span> <a href="https://hchencs.github.io/publications/rong2020integrity.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{rong2020Integrity,
+    author = {Rong, Yuyang and Chen, Peng and Chen, Hao},
+    title = {Integrity: Finding Integer Errors by Targeted Fuzzing},  
+    booktitle = {International Conference on Security and Privacy in Communication Networks (SecureComm)},
+    date = {2020-10-21&#x2F;2020-10-23},
+}</code></pre></details><span class="publication-authors"><span class="author">Rong, Y.</span>, <span class="author">Chen, P.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Communication Networks (SecureComm)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="chen2020Style"></a><span class="publication-title">StyleCAPTCHA: CAPTCHA Based on Style-Transferred Images to Defend against Deep Convolutional Networks</span> <a href="https://doi.org/10.1145/3412815.3416895"><i class="ai ai-doi" title="DOI"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2020Style,
+    author = {Chen, Haitian and Jiang, Bai and Chen, Hao},
+    title = {{StyleCAPTCHA}: {CAPTCHA} Based on Style-Transferred Images to Defend against Deep Convolutional Networks},  
+    booktitle = {ACM-IMS Foundations of Data Science Conference (FODS)},
+    date = {2020-10-18&#x2F;2020-10-20},
+    doi = {https://doi.org/10.1145/3412815.3416895},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Jiang, B.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM-IMS Foundations of Data Science Conference (FODS)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="li2020ILA"></a><span class="publication-title">Yet Another Intermediate-Level Attack</span> <a href="https://hchencs.github.io/publications/li2020ila.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{li2020ILA,
+    author = {Li, Qizhang and Guo, Yiwen and Chen, Hao},
+    title = {Yet Another Intermediate-Level Attack},  
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    date = {2020-08-23&#x2F;2020-08-28},
+}</code></pre></details><span class="publication-authors"><span class="author">Li, Q.</span>, <span class="author">Guo, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">European Conference on Computer Vision (ECCV)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="jia2020Tracking"></a><span class="publication-title">Fooling Detection Alone Is Not Enough: Adversarial Attack Against Multiple Object Tracking</span> <a href="https://hchencs.github.io/publications/jia2020tracking.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{jia2020Tracking,
+    author = {Jia, Yunhan and Lu, Yantao and Shen, Junjie and Chen, Qi Alfred and Chen, Hao and Zhong, Zhenyu and Wei, Tao},
+    title = {Fooling Detection Alone Is Not Enough: Adversarial Attack Against Multiple Object Tracking},  
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    date = {2020-04-26&#x2F;2020-04-30},
+    address = {Addis Ababa, Ethiopia},
+}</code></pre></details><span class="publication-authors"><span class="author">Jia, Y.</span>, <span class="author">Lu, Y.</span>, <span class="author">Shen, J.</span>, <span class="author">Chen, Q.</span>, <span class="author">Chen, H.</span>, <span class="author">Zhong, Z.</span> &amp; <span class="author">Wei, T.</span></span><br><span class="publication-venue">International Conference on Learning Representations (ICLR)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="chen2020Transform"></a><span class="publication-title">Explore the Transformation Space for Adversarial Images</span> <a href="https://hchencs.github.io/publications/chen2020transform.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2020Transform,
+    author = {Chen, Jiyu and Wang, David and Chen, Hao},
+    title = {Explore the Transformation Space for Adversarial Images},  
+    booktitle = {ACM Conference on Data and Application Security and Privacy (CODASPY)},
+    date = {2020-03-16&#x2F;2020-03-18},
+    address = {New Orleans, LA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, J.</span>, <span class="author">Wang, D.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Data and Application Security and Privacy (CODASPY)</span>, <span class="publication-year">2020</span></li>
+<li class="publist-item"><a id="chen2019Matryoshka"></a><span class="publication-title">Matryoshka: Fuzzing Deeply Nested Branches</span> <a href="https://doi.org/10.1145/3319535.3363225"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/chen2019matryoshka.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2019Matryoshka,
+    author = {Chen, Peng and Liu, Jianzhong and Chen, Hao},
+    title = {{Matryoshka}: Fuzzing Deeply Nested Branches},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2019-11-11&#x2F;2019-11-15},
+    address = {London, UK},
+    doi = {https://doi.org/10.1145/3319535.3363225},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, P.</span>, <span class="author">Liu, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2019</span></li>
+<li class="publist-item"><a id="chen2019Informer"></a><span class="publication-title">Informer: Irregular Traffic Detection for Containerized Microservices RPC in the Real World</span> <a href="https://hchencs.github.io/publications/chen2019informer.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2019Informer,
+    author = {Chen, Jiyu and Huang, Heqing and Chen, Hao},
+    title = {Informer: Irregular Traffic Detection for Containerized Microservices {RPC} in the Real World},  
+    booktitle = {ACM&#x2F;IEEE Workshop on Security and Privacy in Edge Computing (Edge S\&amp;P)},
+    date = {2019-11-07&#x2F;2019-11-09},
+    address = {Washington DC, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, J.</span>, <span class="author">Huang, H.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM&#x2F;IEEE Workshop on Security and Privacy in Edge Computing (Edge S&amp;P)</span>, <span class="publication-year">2019</span></li>
+<li class="publist-item"><a id="yen2018Falsified"></a><span class="publication-title">Falsified Data Attack on Backpressure-Based Traffic Signal Control Algorithms</span> <a href="https://hchencs.github.io/publications/yen2018falsified.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{yen2018Falsified,
+    author = {Yen, Chia-Cheng and Ghosal, Dipak and Zhang, Michael and Chuah, Chen-Nee and Chen, Hao},
+    title = {Falsified Data Attack on Backpressure-Based Traffic Signal Control Algorithms},  
+    booktitle = {IEEE Vehicular Networking Conference (VNC)},
+    date = {2018-12-05&#x2F;2018-12-07},
+    address = {Taipei, Taiwan},
+}</code></pre></details><span class="publication-authors"><span class="author">Yen, C.</span>, <span class="author">Ghosal, D.</span>, <span class="author">Zhang, M.</span>, <span class="author">Chuah, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Vehicular Networking Conference (VNC)</span>, <span class="publication-year">2018</span></li>
+<li class="publist-item"><a id="liu2018Sanitization"></a><span class="publication-title">Less Is More: Culling the Training Set to Improve Robustness of Deep Neural Networks</span> <a href="https://hchencs.github.io/publications/liu2018sanitization.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liu2018Sanitization,
+    author = {Liu, Yongshuai and Chen, Jiyu and Chen, Hao},
+    title = {Less Is More: Culling the Training Set to Improve Robustness of Deep Neural Networks},  
+    booktitle = {Conference on Decision and Game Theory for Security (GameSec)},
+    date = {2018-10-29&#x2F;2018-10-31},
+    address = {Seattle, WA, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Liu, Y.</span>, <span class="author">Chen, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Conference on Decision and Game Theory for Security (GameSec)</span>, <span class="publication-year">2018</span></li>
+<li class="publist-item"><a id="chen2018Angora"></a><span class="publication-title">Angora: Efficient Fuzzing by Principled Search</span> <a href="https://doi.org/10.1109/SP.2018.00046"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/chen2018angora.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2018Angora,
+    author = {Chen, Peng and Chen, Hao},
+    title = {{Angora}: Efficient Fuzzing by Principled Search},  
+    booktitle = {IEEE Symposium on Security \&amp; Privacy},
+    date = {2018-05-21&#x2F;2018-05-23},
+    address = {San Francisco, CA, USA},
+    doi = {https://doi.org/10.1109/SP.2018.00046},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, P.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Symposium on Security &amp; Privacy</span>, <span class="publication-year">2018</span></li>
+<li class="publist-item"><a id="zhang2018Library"></a><span class="publication-title">Detecting Third-Party Libraries in Android Applications with High Precision and Recall</span> <a href="https://hchencs.github.io/publications/zhang2018library.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{zhang2018Library,
+    author = {Zhang, Yuan and Dai, Jiarun and Zhang, Xiaohan and Huang, Sirong and Yang, Zhemin and Yang, Min and Chen, Hao},
+    title = {Detecting Third-Party Libraries in {Android} Applications with High Precision and Recall},  
+    booktitle = {IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)},
+    date = {2018-03-20&#x2F;2018-03-23},
+    address = {Campobasso, Italy},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhang, Y.</span>, <span class="author">Dai, J.</span>, <span class="author">Zhang, X.</span>, <span class="author">Huang, S.</span>, <span class="author">Yang, Z.</span>, <span class="author">Yang, M.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)</span>, <span class="publication-year">2018</span></li>
+<li class="publist-item"><a id="han2017senDroid"></a><span class="publication-title">senDroid: Auditing Sensor Access in Android System-Wide</span> <a href="https://doi.org/10.1109/TDSC.2017.2768536"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/han2017sendroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{han2017senDroid,
+    author = {Han, Weili and Cao, Chang and Chen, Hao and Li, Dong and Fang, Zheran and Xu, Wenyuan and Wang, Xiaoyang},
+    title = {senDroid: Auditing Sensor Access in {Android} System-Wide},
+    journal = {IEEE Transactions on Dependable and Secure Computing},
+    year = {2017},
+    volume = {17},
+    number = {2},
+    doi = {https://doi.org/10.1109/TDSC.2017.2768536},
+}</code></pre></details><span class="publication-authors"><span class="author">Han, W.</span>, <span class="author">Cao, C.</span>, <span class="author">Chen, H.</span>, <span class="author">Li, D.</span>, <span class="author">Fang, Z.</span>, <span class="author">Xu, W.</span> &amp; <span class="author">Wang, X.</span></span><br><span class="publication-venue">IEEE Transactions on Dependable and Secure Computing</span> <span class="publication-volume">17</span>, 407&ndash;421<span class="publication-year"> (2017)</span></li>
+<li class="publist-item"><a id="meng2017MagNet"></a><span class="publication-title">MagNet: a Two-Pronged Defense Against Adversarial Examples</span> <a href="https://doi.org/10.1145/3133956.3134057"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/meng2017magnet.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{meng2017MagNet,
+    author = {Meng, Dongyu and Chen, Hao},
+    title = {{MagNet}: a Two-Pronged Defense Against Adversarial Examples},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2017-10-30&#x2F;2017-11-03},
+    address = {Dallas, TX},
+    doi = {https://doi.org/10.1145/3133956.3134057},
+}</code></pre></details><span class="publication-authors"><span class="author">Meng, D.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2017</span></li>
+<li class="publist-item"><a id="wu2017Browser"></a><span class="publication-title">Evaluating Private Modes in Desktop and Mobile Browsers and Their Resistance to Fingerprinting</span> <a href="https://hchencs.github.io/publications/wu2017browser.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{wu2017Browser,
+    author = {Wu, Yuanyi and Meng, Dongyu and Chen, Hao},
+    title = {Evaluating Private Modes in Desktop and Mobile Browsers and Their Resistance to Fingerprinting},  
+    booktitle = {IEEE Conference on Communications and Network Security (CNS)},
+    date = {2017-10-09&#x2F;2017-10-11},
+    address = {Las Vegas, NV},
+}</code></pre></details><span class="publication-authors"><span class="author">Wu, Y.</span>, <span class="author">Meng, D.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Conference on Communications and Network Security (CNS)</span>, <span class="publication-year">2017</span></li>
+<li class="publist-item"><a id="vronsky2017SurgeScan"></a><span class="publication-title">SurgeScan: Enforcing Security Policies on Untrusted Third-Party Android Libraries</span> <a href="https://hchencs.github.io/publications/vronsky2017surgescan.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{vronsky2017SurgeScan,
+    author = {Vronsky, Jonathan and Stevens, Ryan and Chen, Hao},
+    title = {{SurgeScan}: Enforcing Security Policies on Untrusted Third-Party {Android} Libraries},  
+    booktitle = {IEEE Conference on Advanced and Trusted Computing (ATC)},
+    date = {2017-08-04&#x2F;2017-08-08},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Vronsky, J.</span>, <span class="author">Stevens, R.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Conference on Advanced and Trusted Computing (ATC)</span>, <span class="publication-year">2017</span></li>
+<li class="publist-item"><a id="zhang2016FineDroid"></a><span class="publication-title">Rethinking Permission Enforcement Mechanism on Mobile Systems</span> <a href="https://doi.org/10.1109/TIFS.2016.2581304"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/zhang2016finedroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{zhang2016FineDroid,
+    author = {Zhang, Yuan and Yang, Min and Gu, Guofei and Chen, Hao},
+    title = {Rethinking Permission Enforcement Mechanism on Mobile Systems},
+    journal = {IEEE Transactions on Information Forensics \&amp; Security},
+    year = {2016},
+    volume = {11},
+    number = {10},
+    doi = {https://doi.org/10.1109/TIFS.2016.2581304},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhang, Y.</span>, <span class="author">Yang, M.</span>, <span class="author">Gu, G.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Transactions on Information Forensics &amp; Security</span> <span class="publication-volume">11</span>, 2227&ndash;2240<span class="publication-year"> (2016)</span></li>
+<li class="publist-item"><a id="qu2016AppShield"></a><span class="publication-title">AppShield: Enabling Multi-Entity Access Control Cross Platforms for Mobile App Management</span> <a href="https://hchencs.github.io/publications/qu2016appshield.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{qu2016AppShield,
+    author = {Qu, Zhengyang and Guo, Guanyu and Shao, Zhengyue and Rastogi, Vaibhav and Chen, Yan and Chen, Hao and Hong, Wangjun},
+    title = {{AppShield}: Enabling Multi-Entity Access Control Cross Platforms for Mobile App Management},  
+    booktitle = {International Conference on Security and Privacy in Communication Networks (SECURECOMM)},
+    date = {2016-10-10&#x2F;2016-10-12},
+    address = {Guangzhou, China},
+}</code></pre></details><span class="publication-authors"><span class="author">Qu, Z.</span>, <span class="author">Guo, G.</span>, <span class="author">Shao, Z.</span>, <span class="author">Rastogi, V.</span>, <span class="author">Chen, Y.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Hong, W.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Communication Networks (SECURECOMM)</span>, <span class="publication-year">2016</span></li>
+<li class="publist-item"><a id="chen2016UAV"></a><span class="publication-title">Security Analysis of Personal Unmanned Aerial Vehicles</span> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2016UAV,
+    author = {Chen, Peng and Chen, Hao},
+    title = {Security Analysis of Personal Unmanned Aerial Vehicles},  
+    booktitle = {International Conference on Security and Privacy in Communication Networks (SECURECOMM)},
+    date = {2016-10-10&#x2F;2016-10-12},
+    address = {Guangzhou, China},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, P.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Communication Networks (SECURECOMM)</span>, <span class="publication-year">2016</span></li>
+<li class="publist-item"><a id="fang2016revDroid"></a><span class="publication-title">RevDroid: Code Analysis of the Side Effects After Dynamic Permission Revocation of Android Apps</span> <a href="https://hchencs.github.io/publications/fang2016revdroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{fang2016revDroid,
+    author = {Fang, Zheran and Han, Weili and Li, Dong and Guo, Zeqing and Guo, Danhao and Wang, X. Sean and Qian, Zhiyun and Chen, Hao},
+    title = {{RevDroid}: Code Analysis of the Side Effects After Dynamic Permission Revocation of {Android} Apps},  
+    booktitle = {ACM Asia Conference on Computer and Communications Security  (ASIACCS)},
+    date = {2016-05-30&#x2F;2016-06-03},
+    address = {Xi&#x27;an, China},
+}</code></pre></details><span class="publication-authors"><span class="author">Fang, Z.</span>, <span class="author">Han, W.</span>, <span class="author">Li, D.</span>, <span class="author">Guo, Z.</span>, <span class="author">Guo, D.</span>, <span class="author">Wang, X.</span>, <span class="author">Qian, Z.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Asia Conference on Computer and Communications Security  (ASIACCS)</span>, <span class="publication-year">2016</span></li>
+<li class="publist-item"><a id="crussell2015AnDarwin"></a><span class="publication-title">AnDarwin: Scalable Detection of Android Application Clones Based on Semantics</span> <a href="https://doi.org/10.1109/TMC.2014.2381212"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/crussell2015andarwin.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{crussell2015AnDarwin,
+    author = {Crussell, Jonathan and Gibler, Clint and Chen, Hao},
+    title = {AnDarwin: Scalable Detection of {Android} Application Clones Based on Semantics},
+    journal = {IEEE Transactions on Mobile Computing},
+    year = {2015},
+    volume = {14},
+    number = {10},
+    doi = {https://doi.org/10.1109/TMC.2014.2381212},
+}</code></pre></details><span class="publication-authors"><span class="author">Crussell, J.</span>, <span class="author">Gibler, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Transactions on Mobile Computing</span> <span class="publication-volume">14</span>, 2007&ndash;2019<span class="publication-year"> (2015)</span></li>
+<li class="publist-item"><a id="stevens2015MTOP"></a><span class="publication-title">On the Origin of Mobile Apps: Network Provenance for Android Applications</span> <a href="https://hchencs.github.io/publications/stevens2015mtop.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{stevens2015MTOP,
+    author = {Stevens, Ryan and Crussell, Jonathan and Chen, Hao},
+    title = {On the Origin of Mobile Apps: Network Provenance for {Android} Applications},  
+    booktitle = {ACM Conference on Data and Application Security and Privacy (CODASPY)},
+    date = {2016-03-09&#x2F;2016-03-11},
+    address = {New Orleans, LA},
+}</code></pre></details><span class="publication-authors"><span class="author">Stevens, R.</span>, <span class="author">Crussell, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Data and Application Security and Privacy (CODASPY)</span>, <span class="publication-year">2016</span></li>
+<li class="publist-item"><a id="stevens2015Pred"></a><span class="publication-title">Predictive Eviction: a Novel Policy for Optimizing TLS Session Cache Performance</span> <a href="https://hchencs.github.io/publications/stevens2015pred.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{stevens2015Pred,
+    author = {Stevens, Ryan and Chen, Hao},
+    title = {Predictive Eviction: a Novel Policy for Optimizing {TLS} Session Cache Performance},  
+    booktitle = {IEEE Global Communications Conference: Communications and Information System Security (GLOBECOM)},
+    date = {2015-12-06&#x2F;2015-12-10},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Stevens, R.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Global Communications Conference: Communications and Information System Security (GLOBECOM)</span>, <span class="publication-year">2015</span></li>
+<li class="publist-item"><a id="zhang2015FineDroid"></a><span class="publication-title">FineDroid: Enforcing Permissions with System-Wide Application</span> <a href="https://hchencs.github.io/publications/zhang2015finedroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{zhang2015FineDroid,
+    author = {Zhang, Yuan and Yang, Min and Gu, Guofei and Chen, Hao},
+    title = {{FineDroid}: Enforcing Permissions with System-Wide Application},  
+    booktitle = {International Conference on Security and Privacy in Communication Networks (SECURECOMM)},
+    date = {2015-10-26&#x2F;2015-10-29},
+    address = {Dallas, TX},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhang, Y.</span>, <span class="author">Yang, M.</span>, <span class="author">Gu, G.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Communication Networks (SECURECOMM)</span>, <span class="publication-year">2015</span></li>
+<li class="publist-item"><a id="cai2015AppCracker"></a><span class="publication-title">AppCracker: Widespread Vulnerabilities in User and Session Authentication in Mobile Apps</span> <a href="https://hchencs.github.io/publications/cai2015appcracker.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{cai2015AppCracker,
+    author = {Cai, Fangda and Chen, Hao and Wu, Yuanyi and Zhang, Yuan},
+    title = {{AppCracker}: Widespread Vulnerabilities in User and Session Authentication in Mobile Apps},  
+    booktitle = {IEEE Mobile Security Technologies (MoST)},
+    date = {2015-05-21},
+    address = {San Jose, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, F.</span>, <span class="author">Chen, H.</span>, <span class="author">Wu, Y.</span> &amp; <span class="author">Zhang, Y.</span></span><br><span class="publication-venue">IEEE Mobile Security Technologies (MoST)</span>, <span class="publication-year">2015</span></li>
+<li class="publist-item"><a id="crussell2014MAdFraud"></a><span class="publication-title">MAdFraud: Investigating Ad Fraud in Android Applications</span> <a href="https://hchencs.github.io/publications/crussell2014madfraud.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{crussell2014MAdFraud,
+    author = {Crussell, Jonathan and Stevens, Ryan and Chen, Hao},
+    title = {{MAdFraud}: Investigating Ad Fraud in {Android} Applications},  
+    booktitle = {International Conference on Mobile Systems, Applications and Services (MobiSys)},
+    date = {2014-06-16&#x2F;2014-06-19},
+    address = {Bretton Woods, NH, USA},
+}</code></pre></details><span class="publication-authors"><span class="author">Crussell, J.</span>, <span class="author">Stevens, R.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Mobile Systems, Applications and Services (MobiSys)</span>, <span class="publication-year">2014</span></li>
+<li class="publist-item"><a id="defreez2014Firefox"></a><span class="publication-title">A First Look At Firefox OS Security</span> <a href="https://hchencs.github.io/publications/defreez2014firefox.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{defreez2014Firefox,
+    author = {Defreez, Daniel and Shastry, Bhargava and Chen, Hao and Seifert, Jean-Pierre},
+    title = {A First Look At Firefox {OS} Security},  
+    booktitle = {IEEE Mobile Security Technologies (MoST)},
+    date = {2014-05-17},
+    address = {San Jose, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Defreez, D.</span>, <span class="author">Shastry, B.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Seifert, J.</span></span><br><span class="publication-venue">IEEE Mobile Security Technologies (MoST)</span>, <span class="publication-year">2014</span></li>
+<li class="publist-item"><a id="posnett2013UA"></a><span class="publication-title">Using and Asking: APIs Used in the Android Market and Asked About in stackoverflow</span> <a href="https://hchencs.github.io/publications/posnett2013ua.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{posnett2013UA,
+    author = {Posnett, Daryl and Kavaler, David and Gibler, Clint and Chen, Hao and Devanbu, Prem and Filkov, Vladimir},
+    title = {Using and Asking: {APIs} Used in the {Android} Market and Asked About in {stackoverflow}},  
+    booktitle = {International Conference on Social Informatics (SocInfo)},
+    date = {2013-11-25&#x2F;2013-11-27},
+    address = {Kyoto, Japan},
+}</code></pre></details><span class="publication-authors"><span class="author">Posnett, D.</span>, <span class="author">Kavaler, D.</span>, <span class="author">Gibler, C.</span>, <span class="author">Chen, H.</span>, <span class="author">Devanbu, P.</span> &amp; <span class="author">Filkov, V.</span></span><br><span class="publication-venue">International Conference on Social Informatics (SocInfo)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="crussell2013AnDarwin"></a><span class="publication-title">Scalable Semantics-Based Detection of Similar Android Applications</span> <a href="https://hchencs.github.io/publications/crussell2013andarwin.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{crussell2013AnDarwin,
+    author = {Crussell, Jonathan and Gibler, Clint and Chen, Hao},
+    title = {Scalable Semantics-Based Detection of Similar {Android} Applications},  
+    booktitle = {European Symposium on Research in Computer Security (ESORICS)},
+    date = {2013-09-09&#x2F;2013-09-13},
+    address = {Egham, U.K.},
+}</code></pre></details><span class="publication-authors"><span class="author">Crussell, J.</span>, <span class="author">Gibler, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">European Symposium on Research in Computer Security (ESORICS)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="davis2013Retrofit"></a><span class="publication-title">Retrofitting Android Apps</span> <a href="https://hchencs.github.io/publications/davis2013retrofit.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{davis2013Retrofit,
+    author = {Davis, Benjamin and Chen, Hao},
+    title = {Retrofitting {Android} Apps},  
+    booktitle = {International Conference on Mobile Systems, Applications and Services (MobiSys)},
+    date = {2013-06-25&#x2F;2013-06-28},
+    address = {Taipei, Taiwan},
+}</code></pre></details><span class="publication-authors"><span class="author">Davis, B.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Mobile Systems, Applications and Services (MobiSys)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="gibler2013UEcon"></a><span class="publication-title">Characterizing Android Application Plagiarism and Its Impact on Developers</span> <a href="https://hchencs.github.io/publications/gibler2013uecon.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{gibler2013UEcon,
+    author = {Gibler, Clint and Stevens, Ryan and Crussell, Jon and Chen, Hao and Zang, Hui and Choi, Heesook},
+    title = {Characterizing {Android} Application Plagiarism and Its Impact on Developers},  
+    booktitle = {International Conference on Mobile Systems, Applications and Services (MobiSys)},
+    date = {2013-06-25&#x2F;2013-06-28},
+    address = {Taipei, Taiwan},
+}</code></pre></details><span class="publication-authors"><span class="author">Gibler, C.</span>, <span class="author">Stevens, R.</span>, <span class="author">Crussell, J.</span>, <span class="author">Chen, H.</span>, <span class="author">Zang, H.</span> &amp; <span class="author">Choi, H.</span></span><br><span class="publication-venue">International Conference on Mobile Systems, Applications and Services (MobiSys)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="gustafson2013Permission"></a><span class="publication-title">Quantifying the Effects of Removing Permissions from Android Applications</span> <a href="https://hchencs.github.io/publications/gustafson2013permission.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{gustafson2013Permission,
+    author = {Gustafson, Eric and Kennedy, Kristen and Chen, Hao},
+    title = {Quantifying the Effects of Removing Permissions from {Android} Applications},  
+    booktitle = {IEEE Mobile Security Technologies (MoST)},
+    date = {2013-05-23},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Gustafson, E.</span>, <span class="author">Kennedy, K.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Mobile Security Technologies (MoST)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="stevens2013Permission"></a><span class="publication-title">Asking for (and About) Permissions Used by Android Apps</span> <a href="https://hchencs.github.io/publications/stevens2013permission.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{stevens2013Permission,
+    author = {Stevens, Ryan and Ganz, Jonathan and Devanbu, Prem and Chen, Hao and Filkov, Vladimir},
+    title = {Asking for (and About) Permissions Used by {Android} Apps},  
+    booktitle = {Working Conference on Mining Software Repositories (MSR)},
+    date = {2013-05-18&#x2F;2013-05-19},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Stevens, R.</span>, <span class="author">Ganz, J.</span>, <span class="author">Devanbu, P.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Filkov, V.</span></span><br><span class="publication-venue">Working Conference on Mining Software Repositories (MSR)</span>, <span class="publication-year">2013</span></li>
+<li class="publist-item"><a id="vanGundy2012Noncespaces"></a><span class="publication-title">Noncespaces: Using Randomization to Defeat Cross-Site Scripting Attacks</span> <a href="https://doi.org/10.1016/j.cose.2011.12.004"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/vangundy2012noncespaces.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{vanGundy2012Noncespaces,
+    author = {Van Gundy, Matthew and Chen, Hao},
+    title = {{Noncespaces}: Using Randomization to Defeat Cross-Site Scripting Attacks},
+    journal = {Computers \&amp; Security},
+    year = {2012},
+    volume = {31},
+    number = {4},
+    doi = {https://doi.org/10.1016/j.cose.2011.12.004},
+}</code></pre></details><span class="publication-authors"><span class="author">Van Gundy, M.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Computers &amp; Security</span> <span class="publication-volume">31</span>, 612&ndash;628<span class="publication-year"> (2012)</span></li>
+<li class="publist-item"><a id="crussell2012DNADroid"></a><span class="publication-title">Attack of the Clones: Detecting Cloned Applications on Android Markets</span> <a href="https://hchencs.github.io/publications/crussell2012dnadroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{crussell2012DNADroid,
+    author = {Crussell, Jonathan and Gibler, Clint and Chen, Hao},
+    title = {Attack of the Clones: Detecting Cloned Applications on {Android} Markets},  
+    booktitle = {European Symposium on Research in Computer Security (ESORICS)},
+    date = {2012-09-10&#x2F;2012-09-12},
+    address = {Pisa, Italy},
+}</code></pre></details><span class="publication-authors"><span class="author">Crussell, J.</span>, <span class="author">Gibler, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">European Symposium on Research in Computer Security (ESORICS)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="maganis2012Opaak"></a><span class="publication-title">Opaak: Using Mobile Phones to Limit Anonymous Identities Online</span> <a href="https://hchencs.github.io/publications/maganis2012opaak.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{maganis2012Opaak,
+    author = {Maganis, Gabriel and Shi, Elaine and Chen, Hao and Song, Dawn},
+    title = {{Opaak}: Using Mobile Phones to Limit Anonymous Identities Online},  
+    booktitle = {International Conference on Mobile Systems, Applications and Services (MobiSys)},
+    date = {2012-06-26&#x2F;2012-06-28},
+    address = {Low Wood Bay, Lake District, United Kingdom},
+}</code></pre></details><span class="publication-authors"><span class="author">Maganis, G.</span>, <span class="author">Shi, E.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Song, D.</span></span><br><span class="publication-venue">International Conference on Mobile Systems, Applications and Services (MobiSys)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="gibler2012AndroidLeaks"></a><span class="publication-title">AndroidLeaks: Automatically Detecting Potential Privacy Leaks in Android Applications on a Large Scale</span> <a href="https://hchencs.github.io/publications/gibler2012androidleaks.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{gibler2012AndroidLeaks,
+    author = {Gibler, Clint and Crussell, Jon and Erickson, Jeremy and Chen, Hao},
+    title = {{AndroidLeaks}: Automatically Detecting Potential Privacy Leaks in {Android} Applications on a Large Scale},  
+    booktitle = {International Conference on Trust \&amp; Trustworthy Computing (TRUST)},
+    date = {2012-06-13&#x2F;2012-06-15},
+    address = {Vienna, Austria},
+}</code></pre></details><span class="publication-authors"><span class="author">Gibler, C.</span>, <span class="author">Crussell, J.</span>, <span class="author">Erickson, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Trust &amp; Trustworthy Computing (TRUST)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="cai2012Motion"></a><span class="publication-title">On the Practicality of Motion Based Keystroke Infernce Attack</span> <a href="https://hchencs.github.io/publications/cai2012motion.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{cai2012Motion,
+    author = {Cai, Liang and Chen, Hao},
+    title = {On the Practicality of Motion Based Keystroke Infernce Attack},  
+    booktitle = {International Conference on Trust \&amp; Trustworthy Computing (TRUST)},
+    date = {2012-06-13&#x2F;2012-06-15},
+    address = {Vienna, Austria},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Trust &amp; Trustworthy Computing (TRUST)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="stevens2012Ad"></a><span class="publication-title">Investigating User Privacy in Android Ad Libraries</span> <a href="https://hchencs.github.io/publications/stevens2012ad.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{stevens2012Ad,
+    author = {Stevens, Ryan and Gibler, Clint and Crussell, Jon and Erickson, Jeremy and Chen, Hao},
+    title = {Investigating User Privacy in {Android} Ad Libraries},  
+    booktitle = {IEEE Mobile Security Technologies (MoST)},
+    date = {2012-05-24},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Stevens, R.</span>, <span class="author">Gibler, C.</span>, <span class="author">Crussell, J.</span>, <span class="author">Erickson, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Mobile Security Technologies (MoST)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="davis2012IARMDroid"></a><span class="publication-title">I-ARM-Droid: a Rewriting Framework for In-App Reference Monitors for Android Applications</span> <a href="https://hchencs.github.io/publications/davis2012iarmdroid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{davis2012IARMDroid,
+    author = {Davis, Benjamin and Sanders, Ben and Khodaverdian, Armen and Chen, Hao},
+    title = {{I-ARM-Droid}: a Rewriting Framework for In-App Reference Monitors for {Android} Applications},  
+    booktitle = {IEEE Mobile Security Technologies (MoST)},
+    date = {2012-05-24},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Davis, B.</span>, <span class="author">Sanders, B.</span>, <span class="author">Khodaverdian, A.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Mobile Security Technologies (MoST)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="davis2012Alibi"></a><span class="publication-title">Privacy-Preserving Alibi Systems</span> <a href="https://hchencs.github.io/publications/davis2012alibi.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{davis2012Alibi,
+    author = {Davis, Benjamin and Chen, Hao and Franklin, Matthew},
+    title = {Privacy-Preserving Alibi Systems},  
+    booktitle = {ACM Symposium on Information, Computer and Communications Security (ASIACCS)},
+    date = {2012-05-01&#x2F;2012-05-03},
+    address = {Seoul, South Korea},
+}</code></pre></details><span class="publication-authors"><span class="author">Davis, B.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Franklin, M.</span></span><br><span class="publication-venue">ACM Symposium on Information, Computer and Communications Security (ASIACCS)</span>, <span class="publication-year">2012</span></li>
+<li class="publist-item"><a id="hsu2011WebCallerID"></a><span class="publication-title">WebCallerID: Leveraging Cellular Networks for Web Authentication</span> <a href="https://doi.org/10.3233/JCS-2011-0424"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/hsu2011webcallerid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{hsu2011WebCallerID,
+    author = {Hsu, Francis and Chen, Hao and Machiraju, Sridhar},
+    title = {{WebCallerID}: Leveraging Cellular Networks for {Web} Authentication},
+    journal = {Journal of Computer Security},
+    year = {2011},
+    volume = {19},
+    number = {5},
+    doi = {https://doi.org/10.3233/JCS-2011-0424},
+}</code></pre></details><span class="publication-authors"><span class="author">Hsu, F.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Machiraju, S.</span></span><br><span class="publication-venue">Journal of Computer Security</span> <span class="publication-volume">19</span>, 869&ndash;893<span class="publication-year"> (2011)</span></li>
+<li class="publist-item"><a id="cai2011TouchLogger"></a><span class="publication-title">TouchLogger: Inferring Keystrokes on Touch Screen from Smartphone Motion</span> <a href="https://hchencs.github.io/publications/cai2011touchlogger.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{cai2011TouchLogger,
+    author = {Cai, Liang and Chen, Hao},
+    title = {{TouchLogger}: Inferring Keystrokes on Touch Screen from Smartphone Motion},  
+    booktitle = {USENIX Workshop on Hot Topics in Security (HotSec 11)},
+    date = {2011-08-09&#x2F;2011-08-09},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">USENIX Workshop on Hot Topics in Security (HotSec 11)</span>, <span class="publication-year">2011</span></li>
+<li class="publist-item"><a id="yuan2011Gesture"></a><span class="publication-title">Gesture Authentication with Touch Input for Mobile Devices</span> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{yuan2011Gesture,
+    author = {Niu, Yuan and Chen, Hao},
+    title = {Gesture Authentication with Touch Input for Mobile Devices},  
+    booktitle = {International Conference on Security and Privacy in Mobile Information and Communication Systems (MobiSec)},
+    date = {2011-05-17&#x2F;2011-05-19},
+    address = {Aalborg, Denmark},
+}</code></pre></details><span class="publication-authors"><span class="author">Niu, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Mobile Information and Communication Systems (MobiSec)</span>, <span class="publication-year">2011</span></li>
+<li class="publist-item"><a id="cai2011GoodNeighbor"></a><span class="publication-title">Good Neighbor: Ad Hoc Pairing of Nearby Wireless Devices by Multiple Antennas</span> <a href="https://hchencs.github.io/publications/cai2011goodneighbor.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{cai2011GoodNeighbor,
+    author = {Cai, Liang and Zeng, Kai and Chen, Hao and Mohapatra, Prasant},
+    title = {{Good Neighbor}: Ad Hoc Pairing of Nearby Wireless Devices by Multiple Antennas},  
+    booktitle = {Annual Network and Distributed System Security Symposium (NDSS)},
+    date = {2011-02-06&#x2F;2011-02-09},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span>, <span class="author">Zeng, K.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Mohapatra, P.</span></span><br><span class="publication-venue">Annual Network and Distributed System Security Symposium (NDSS)</span>, <span class="publication-year">2011</span></li>
+<li class="publist-item"><a id="racic2010Scheduling"></a><span class="publication-title">Exploiting and Defending Opportunistic Scheduling in Cellular Data Networks</span> <a href="https://doi.org/10.1109/TMC.2009.146"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/racic2010scheduling.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{racic2010Scheduling,
+    author = {Racic, Radmilo and Ma, Denys and Chen, Hao and Liu, Xin},
+    title = {Exploiting and Defending Opportunistic Scheduling in Cellular Data Networks},
+    journal = {IEEE Transactions on Mobile Computing},
+    year = {2009},
+    volume = {9},
+    doi = {https://doi.org/10.1109/TMC.2009.146},
+}</code></pre></details><span class="publication-authors"><span class="author">Racic, R.</span>, <span class="author">Ma, D.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Liu, X.</span></span><br><span class="publication-venue">IEEE Transactions on Mobile Computing</span> <span class="publication-volume">9</span>, 609&ndash;620<span class="publication-year"> (2009)</span></li>
+<li class="publist-item"><a id="davis2010DBTaint"></a><span class="publication-title">DBTaint: Cross-Application Information Flow Tracking Via Databases</span> <a href="https://hchencs.github.io/publications/davis2010dbtaint.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{davis2010DBTaint,
+    author = {Davis, Benjamin and Chen, Hao},
+    title = {{DBTaint}: Cross-Application Information Flow Tracking Via Databases},  
+    booktitle = {USENIX Conference on Web Application},
+    date = {2010-06-23&#x2F;2010-06-24},
+    address = {Boston, MA},
+}</code></pre></details><span class="publication-authors"><span class="author">Davis, B.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">USENIX Conference on Web Application</span>, <span class="publication-year">2010</span></li>
+<li class="publist-item"><a id="liang2010CapAuth"></a><span class="publication-title">CapAuth: a Capability-Based Handover Scheme</span> <a href="https://hchencs.github.io/publications/liang2010capauth.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liang2010CapAuth,
+    author = {Cai, Liang and Machiraju, Sridhar and Chen, Hao},
+    title = {{CapAuth}: a Capability-Based Handover Scheme},  
+    booktitle = {IEEE Conference on Computer Communications (INFOCOM)},
+    date = {2010-03-15&#x2F;2010-03-19},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span>, <span class="author">Machiraju, S.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Conference on Computer Communications (INFOCOM)</span>, <span class="publication-year">2010</span></li>
+<li class="publist-item"><a id="hsu2009WebFS"></a><span class="publication-title">Secure File System Services for Web 2.0 Applications</span> <a href="https://hchencs.github.io/publications/hsu2009webfs.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{hsu2009WebFS,
+    author = {Hsu, Francis and Chen, Hao},
+    title = {Secure File System Services for {Web} 2.0 Applications},  
+    booktitle = {ACM Cloud Computing Security Workshop (CCSW 2009)},
+    date = {2009-11-13&#x2F;2009-11-13},
+    address = {Chicago, IL},
+}</code></pre></details><span class="publication-authors"><span class="author">Hsu, F.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Cloud Computing Security Workshop (CCSW 2009)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="goldberg2009mpOTR"></a><span class="publication-title">Multi-Party Off-the-Record Messaging</span> <a href="https://hchencs.github.io/publications/goldberg2009mpotr.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{goldberg2009mpOTR,
+    author = {Goldberg, Ian and Ustaoglu, Berkant and Van Gundy, Matthew and Chen, Hao},
+    title = {Multi-Party Off-the-Record Messaging},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2009-11-09&#x2F;2009-11-13},
+    address = {Chicago, IL},
+}</code></pre></details><span class="publication-authors"><span class="author">Goldberg, I.</span>, <span class="author">Ustaoglu, B.</span>, <span class="author">Van Gundy, M.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="liang2009Paging"></a><span class="publication-title">Mitigating DoS Attacks on the Paging Channel by Efficient Encoding in Page Messages</span> <a href="https://hchencs.github.io/publications/liang2009paging.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liang2009Paging,
+    author = {Cai, Liang and Maganis, Gabriel and Zang, Hui and Chen, Hao},
+    title = {Mitigating {DoS} Attacks on the Paging Channel by Efficient Encoding in Page Messages},  
+    booktitle = {International Conference on Security and Privacy in Communication Networks (SecureComm)},
+    date = {2009-09-14&#x2F;2009-09-18},
+    address = {Athens, Greece},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span>, <span class="author">Maganis, G.</span>, <span class="author">Zang, H.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International Conference on Security and Privacy in Communication Networks (SecureComm)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="ye2009Search"></a><span class="publication-title">Noise Injection for Search Privacy Protection</span> <a href="https://hchencs.github.io/publications/ye2009search.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{ye2009Search,
+    author = {Ye, Shaozhi and Wu, Felix and Pandey, Raju and Chen, Hao},
+    title = {Noise Injection for Search Privacy Protection},  
+    booktitle = {IEEE International Conference on Privacy, Security, Risk and Trust (PASSAT)},
+    date = {2009-08-29&#x2F;2009-08-31},
+    address = {Vancouver, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">Ye, S.</span>, <span class="author">Wu, F.</span>, <span class="author">Pandey, R.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE International Conference on Privacy, Security, Risk and Trust (PASSAT)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="liang2009Sensor"></a><span class="publication-title">Defending Against Sensor-Sniffing Attacks on Mobile Phones</span> <a href="https://hchencs.github.io/publications/liang2009sensor.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{liang2009Sensor,
+    author = {Cai, Liang and Machiraju, Sridhar and Chen, Hao},
+    title = {Defending Against Sensor-Sniffing Attacks on Mobile Phones},  
+    booktitle = {The First ACM SIGCOMM Workshop on Networking, Systems, Applications on Mobile Handhelds (MobiHeld)},
+    date = {2009-08-17&#x2F;2009-08-17},
+    address = {Barcelona, Spain},
+}</code></pre></details><span class="publication-authors"><span class="author">Cai, L.</span>, <span class="author">Machiraju, S.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">The First ACM SIGCOMM Workshop on Networking, Systems, Applications on Mobile Handhelds (MobiHeld)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="becker2009SocialNetworks"></a><span class="publication-title">Measuring Privacy Risk in Online Social Networks</span> <a href="https://hchencs.github.io/publications/becker2009socialnetworks.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{becker2009SocialNetworks,
+    author = {Becker, Justin and Chen, Hao},
+    title = {Measuring Privacy Risk in Online Social Networks},  
+    booktitle = {Web 2.0 Security and Privacy (W2SP)},
+    date = {2009-05-21&#x2F;2009-05-21},
+    address = {Oakland, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Becker, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Web 2.0 Security and Privacy (W2SP)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="vanGundy2009Noncespaces"></a><span class="publication-title">Noncespaces: Using Randomization to Enforce Information Flow Tracking and Thwart Cross-Site Scripting Attacks</span> <a href="https://hchencs.github.io/publications/vangundy2009noncespaces.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{vanGundy2009Noncespaces,
+    author = {Van Gundy, Matthew and Chen, Hao},
+    title = {{Noncespaces}: Using Randomization to Enforce Information Flow Tracking and Thwart Cross-Site Scripting Attacks},  
+    booktitle = {Annual Network and Distributed System Security Symposium (NDSS)},
+    date = {2009-02-08&#x2F;2009-02-11},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Van Gundy, M.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Annual Network and Distributed System Security Symposium (NDSS)</span>, <span class="publication-year">2009</span></li>
+<li class="publist-item"><a id="misherghi2008Firewall"></a><span class="publication-title">A General Framework for Benchmarking Firewall Optimization Techniques</span> <a href="https://doi.org/10.1109/TNSM.2009.041104"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/misherghi2008firewall.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{misherghi2008Firewall,
+    author = {Misherghi, G and Yuan, Lihua and Su, Zhendong and Chuah, Chen-Nee and Chen, Hao},
+    title = {A General Framework for Benchmarking Firewall Optimization Techniques},
+    journal = {IEEE Transactions on Network and Service Management},
+    year = {2008},
+    volume = {5},
+    number = {4},
+    doi = {https://doi.org/10.1109/TNSM.2009.041104},
+}</code></pre></details><span class="publication-authors"><span class="author">Misherghi, G.</span>, <span class="author">Yuan, L.</span>, <span class="author">Su, Z.</span>, <span class="author">Chuah, C.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">IEEE Transactions on Network and Service Management</span> <span class="publication-volume">5</span>, 227&ndash;238<span class="publication-year"> (2008)</span></li>
+<li class="publist-item"><a id="crites2008OMash"></a><span class="publication-title">OMash: Enabling Secure Web Mashups Via Object Abstractions</span> <a href="https://hchencs.github.io/publications/crites2008omash.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{crites2008OMash,
+    author = {Crites, Steven and Hsu, Francis and Chen, Hao},
+    title = {{OMash}: Enabling Secure Web Mashups Via Object Abstractions},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2008-10-27&#x2F;2008-10-31},
+    address = {Alexandria, VA},
+}</code></pre></details><span class="publication-authors"><span class="author">Crites, S.</span>, <span class="author">Hsu, F.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2008</span></li>
+<li class="publist-item"><a id="niu2008iPhish"></a><span class="publication-title">iPhish: Phishing Vulnerabilities on Consumer Electronics</span> <a href="https://hchencs.github.io/publications/niu2008iphish.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{niu2008iPhish,
+    author = {Niu, Yuan and Hsu, Francis and Chen, Hao},
+    title = {{iPhish}: Phishing Vulnerabilities on Consumer Electronics},  
+    booktitle = {Usability, Psychology, and Security 2008},
+    date = {2008-04-14&#x2F;2008-04-14},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Niu, Y.</span>, <span class="author">Hsu, F.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Usability, Psychology, and Security 2008</span>, <span class="publication-year">2008</span></li>
+<li class="publist-item"><a id="machiraju2008Authentication"></a><span class="publication-title">Distributed Authentication for Low-Cost Wireless Networks</span> <a href="https://hchencs.github.io/publications/machiraju2008authentication.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{machiraju2008Authentication,
+    author = {Machiraju, Sridhar and Chen, Hao and Bolot, Jean},
+    title = {Distributed Authentication for Low-Cost Wireless Networks},  
+    booktitle = {Workshop on Mobile Computing Systems and Applications (HotMobile)},
+    date = {2008-02-25&#x2F;2008-02-26},
+    address = {Napa Valley, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Machiraju, S.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Bolot, J.</span></span><br><span class="publication-venue">Workshop on Mobile Computing Systems and Applications (HotMobile)</span>, <span class="publication-year">2008</span></li>
+<li class="publist-item"><a id="racic2008PF"></a><span class="publication-title">Exploiting Opportunistic Scheduling in Cellular Data Networks</span> <a href="https://hchencs.github.io/publications/racic2008pf.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{racic2008PF,
+    author = {Racic, Radmilo and Ma, Denys and Chen, Hao and Liu, Xin},
+    title = {Exploiting Opportunistic Scheduling in Cellular Data Networks},  
+    booktitle = {Annual Network and Distributed System Security Symposium (NDSS)},
+    date = {2008-02-10&#x2F;2008-02-13},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Racic, R.</span>, <span class="author">Ma, D.</span>, <span class="author">Chen, H.</span> &amp; <span class="author">Liu, X.</span></span><br><span class="publication-venue">Annual Network and Distributed System Security Symposium (NDSS)</span>, <span class="publication-year">2008</span></li>
+<li class="publist-item"><a id="vanGundy2007FO"></a><span class="publication-title">Feature Omission Vulnerabilities: Thwarting Signature Generation for Polymorphic Worms</span> <a href="https://hchencs.github.io/publications/vangundy2007fo.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{vanGundy2007FO,
+    author = {Van Gundy, Matthew and Chen, Hao and Su, Zhendong and Vigna, Giovanni},
+    title = {Feature Omission Vulnerabilities: Thwarting Signature Generation for Polymorphic Worms},  
+    booktitle = {Annual Computer Security Applications Conference (ACSAC)},
+    date = {2007-12-10&#x2F;2007-12-14},
+    address = {Miami Beach, FL},
+}</code></pre></details><span class="publication-authors"><span class="author">Van Gundy, M.</span>, <span class="author">Chen, H.</span>, <span class="author">Su, Z.</span> &amp; <span class="author">Vigna, G.</span></span><br><span class="publication-venue">Annual Computer Security Applications Conference (ACSAC)</span>, <span class="publication-year">2007</span></li>
+<li class="publist-item"><a id="wang2007WWW"></a><span class="publication-title">Spam Double-Funnel: Connecting Web Spammers with Advertisers</span> <a href="https://hchencs.github.io/publications/wang2007www.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{wang2007WWW,
+    author = {Wang, Yi-Min and Ma, Ming and Niu, Yuan and Chen, Hao},
+    title = {Spam Double-Funnel: Connecting Web Spammers with Advertisers},  
+    booktitle = {International World Wide Web Conference (WWW)},
+    date = {2007-05-08&#x2F;2007-05-12},
+    address = {Banff, Canada},
+}</code></pre></details><span class="publication-authors"><span class="author">Wang, Y.</span>, <span class="author">Ma, M.</span>, <span class="author">Niu, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">International World Wide Web Conference (WWW)</span>, <span class="publication-year">2007</span></li>
+<li class="publist-item"><a id="niu2007Spam"></a><span class="publication-title">A Quantitative Study of Forum Spamming Using Context-Based Analysis</span> <a href="https://hchencs.github.io/publications/niu2007spam.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{niu2007Spam,
+    author = {Niu, Yuan and Wang, Yi-Ming and Chen, Hao and Ma, Ming and Hsu, Francis},
+    title = {A Quantitative Study of Forum Spamming Using Context-Based Analysis},  
+    booktitle = {Annual Network and Distributed System Security Symposium (NDSS)},
+    date = {2007-02-28&#x2F;2007-03-02},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Niu, Y.</span>, <span class="author">Wang, Y.</span>, <span class="author">Chen, H.</span>, <span class="author">Ma, M.</span> &amp; <span class="author">Hsu, F.</span></span><br><span class="publication-venue">Annual Network and Distributed System Security Symposium (NDSS)</span>, <span class="publication-year">2007</span></li>
+<li class="publist-item"><a id="hsu2006BTTF"></a><span class="publication-title">Back to the Future: a Framework for Automatic Malware Removal and System Repair</span> <a href="https://hchencs.github.io/publications/hsu2006bttf.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{hsu2006BTTF,
+    author = {Hsu, Francis and Chen, Hao and Ristenpart, Thomas and Li, Jason and Su, Zhendong},
+    title = {Back to the Future: a Framework for Automatic Malware Removal and System Repair},  
+    booktitle = {Annual Computer Security Applications Conference (ACSAC)},
+    date = {2006-12-11&#x2F;2006-12-15},
+    address = {Miami Beach, FL},
+}</code></pre></details><span class="publication-authors"><span class="author">Hsu, F.</span>, <span class="author">Chen, H.</span>, <span class="author">Ristenpart, T.</span>, <span class="author">Li, J.</span> &amp; <span class="author">Su, Z.</span></span><br><span class="publication-venue">Annual Computer Security Applications Conference (ACSAC)</span>, <span class="publication-year">2006</span></li>
+<li class="publist-item"><a id="racic2006MMS"></a><span class="publication-title">Exploiting MMS Vulnerabilities to Stealthily Exhaust Mobile Phone&#x27;s Battery</span> <a href="https://hchencs.github.io/publications/racic2006mms.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{racic2006MMS,
+    author = {Racic, Radmilo and Ma, Denys and Chen, Hao},
+    title = {Exploiting {MMS} Vulnerabilities to Stealthily Exhaust Mobile Phone&#x27;s Battery},  
+    booktitle = {nternational Conference on Security and Privacy in Communication Network (SecureComm)},
+    date = {2006-08-28&#x2F;2006-09-01},
+    address = {Baltimore, MD},
+}</code></pre></details><span class="publication-authors"><span class="author">Racic, R.</span>, <span class="author">Ma, D.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">nternational Conference on Security and Privacy in Communication Network (SecureComm)</span>, <span class="publication-year">2006</span></li>
+<li class="publist-item"><a id="yuan2006FIREMAN"></a><span class="publication-title">FIREMAN: a Toolkit for FIREwall Modeling and ANalysis</span> <a href="https://hchencs.github.io/publications/yuan2006fireman.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{yuan2006FIREMAN,
+    author = {Yuan, Lihua and Chen, Hao and Mai, Jianning and Chuah, Chen-Nee  and Su, Zhendong and Mohapatra, Prasant},
+    title = {{FIREMAN}: a Toolkit for {FIREwall} {Modeling} and {ANalysis}},  
+    booktitle = {IEEE Symposium on Security and Privacy},
+    date = {2006-05-21&#x2F;2006-05-24},
+    address = {Berkeley, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Yuan, L.</span>, <span class="author">Chen, H.</span>, <span class="author">Mai, J.</span>, <span class="author">Chuah, C.</span>, <span class="author">Su, Z.</span> &amp; <span class="author">Mohapatra, P.</span></span><br><span class="publication-venue">IEEE Symposium on Security and Privacy</span>, <span class="publication-year">2006</span></li>
+<li class="publist-item"><a id="schwarz2005Linux"></a><span class="publication-title">Model Checking an Entire Linux Distribution for Security Violations</span> <a href="https://hchencs.github.io/publications/schwarz2005linux.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{schwarz2005Linux,
+    author = {Schwarz, Benjamin and Chen, Hao and Wagner, David and Morrison, Geoff and West, Jacob and Lin, Jeremy and Tu, Wei},
+    title = {Model Checking an Entire {Linux} Distribution for Security Violations},  
+    booktitle = {Annual Computer Security Applications Conference (ACSAC)},
+    date = {2005-12-05&#x2F;2005-12-09},
+    address = {Tucson, Arizona},
+}</code></pre></details><span class="publication-authors"><span class="author">Schwarz, B.</span>, <span class="author">Chen, H.</span>, <span class="author">Wagner, D.</span>, <span class="author">Morrison, G.</span>, <span class="author">West, J.</span>, <span class="author">Lin, J.</span> &amp; <span class="author">Tu, W.</span></span><br><span class="publication-venue">Annual Computer Security Applications Conference (ACSAC)</span>, <span class="publication-year">2005</span></li>
+<li class="publist-item"><a id="chen2004EROS"></a><span class="publication-title">Using Build-Integrated Static Checking to Preserve Correctness Invariants</span> <a href="https://hchencs.github.io/publications/chen2004eros.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2004EROS,
+    author = {Chen, Hao and Shapiro, Jonathan},
+    title = {Using Build-Integrated Static Checking to Preserve Correctness Invariants},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2004-11-25&#x2F;2004-11-29},
+    address = {Washington, DC},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span> &amp; <span class="author">Shapiro, J.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2004</span></li>
+<li class="publist-item"><a id="chen2004million"></a><span class="publication-title">Model Checking One Million Lines of C Code</span> <a href="https://hchencs.github.io/publications/chen2004million.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2004million,
+    author = {Chen, Hao and Dean, Drew and Wagner, David},
+    title = {Model Checking One Million Lines of {C} Code},  
+    booktitle = {Annual Network and Distributed System Security Symposium (NDSS)},
+    date = {2004-02-04&#x2F;2004-02-06},
+    address = {San Diego, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Dean, D.</span> &amp; <span class="author">Wagner, D.</span></span><br><span class="publication-venue">Annual Network and Distributed System Security Symposium (NDSS)</span>, <span class="publication-year">2004</span></li>
+<li class="publist-item"><a id="chen2002MOPS"></a><span class="publication-title">MOPS: an Infrastructure for Examining Security Properties of Software</span> <a href="https://hchencs.github.io/publications/chen2002mops.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2002MOPS,
+    author = {Chen, Hao and Wagner, David},
+    title = {{MOPS}: an Infrastructure for Examining Security Properties of Software},  
+    booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+    date = {2002-11-18&#x2F;2002-11-22},
+    address = {Washington, DC},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span> &amp; <span class="author">Wagner, D.</span></span><br><span class="publication-venue">ACM Conference on Computer and Communications Security (CCS)</span>, <span class="publication-year">2002</span></li>
+<li class="publist-item"><a id="chen2002setuid"></a><span class="publication-title">Setuid Demystified</span> <a href="https://hchencs.github.io/publications/chen2002setuid.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2002setuid,
+    author = {Chen, Hao and Wagner, David and Dean, Drew},
+    title = {Setuid Demystified},  
+    booktitle = {USENIX Security Symposium},
+    date = {2002-08-05&#x2F;2002-08-09},
+    address = {San Francisco, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Wagner, D.</span> &amp; <span class="author">Dean, D.</span></span><br><span class="publication-venue">USENIX Security Symposium</span>, <span class="publication-year">2002</span></li>
+<li class="publist-item"><a id="dumais2001swish"></a><span class="publication-title">Optimizing Search by Showing Results in Context</span> <a href="https://hchencs.github.io/publications/dumais2001swish.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{dumais2001swish,
+    author = {Dumais, Susan and Cutrell, Edward and Chen, Hao},
+    title = {Optimizing Search by Showing Results in Context},  
+    booktitle = {ACM SIGCHI Conference on Human Factors in Computing Systems (CHI)},
+    date = {2001-03-31&#x2F;2001-04-05},
+    address = {Seattle, WA},
+}</code></pre></details><span class="publication-authors"><span class="author">Dumais, S.</span>, <span class="author">Cutrell, E.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM SIGCHI Conference on Human Factors in Computing Systems (CHI)</span>, <span class="publication-year">2001</span></li>
+<li class="publist-item"><a id="chen2000cat2"></a><span class="publication-title">Classified Displays of Web Search Results</span> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2000cat2,
+    author = {Dumais, Susan and Cutrell, Edward and Chen, Hao},
+    title = {Classified Displays of {Web} Search Results},  
+    booktitle = {ASIST SIG&#x2F;CR Classification Research Workshop},
+    date = {2000-11-12},
+}</code></pre></details><span class="publication-authors"><span class="author">Dumais, S.</span>, <span class="author">Cutrell, E.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ASIST SIG&#x2F;CR Classification Research Workshop</span>, <span class="publication-year">2000</span></li>
+<li class="publist-item"><a id="chen2000cat"></a><span class="publication-title">Hierarchical Classification of Web Content</span> <a href="https://hchencs.github.io/publications/chen2000cat.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2000cat,
+    author = {Dumais, Susan and Chen, Hao},
+    title = {Hierarchical Classification of {Web} Content},  
+    booktitle = {ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+    date = {2000-07-24&#x2F;2000-07-28},
+    address = {Athens, Greece},
+}</code></pre></details><span class="publication-authors"><span class="author">Dumais, S.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)</span>, <span class="publication-year">2000</span></li>
+<li class="publist-item"><a id="chen2000swish"></a><span class="publication-title">Bringing Order to the Web: Automatically Categorizing Search Results</span> <a href="https://hchencs.github.io/publications/chen2000swish.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2000swish,
+    author = {Chen, Hao and Dumais, Susan},
+    title = {Bringing Order to the {Web}: Automatically Categorizing Search Results},  
+    booktitle = {ACM SIGCHI Conference on Human Factors in Computing Systems (CHI)},
+    date = {2000-04-01&#x2F;2000-04-06},
+    address = {The Hague, The Netherlands},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span> &amp; <span class="author">Dumais, S.</span></span><br><span class="publication-venue">ACM SIGCHI Conference on Human Factors in Computing Systems (CHI)</span>, <span class="publication-year">2000</span></li>
+<li class="publist-item"><a id="chen2000textcat"></a><span class="publication-title">Evaluation of Decision Forests on Text Categorization</span> <a href="https://hchencs.github.io/publications/chen2000textcat.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen2000textcat,
+    author = {Chen, Hao and Ho, Tin K.},
+    title = {Evaluation of Decision Forests on Text Categorization},  
+    booktitle = {SPIE Conference on Document Recognition and Retrieval VII},
+    date = {2000-01-26&#x2F;2000-01-27},
+    address = {San Jose, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span> &amp; <span class="author">Ho, T.</span></span><br><span class="publication-venue">SPIE Conference on Document Recognition and Retrieval VII</span>, <span class="publication-year">2000</span></li>
+<li class="publist-item"><a id="chen1999emu"></a><span class="publication-title">Integrating Geometrical and Linguistic Analysis for E-mail Signature Block Parsing</span> <a href="https://doi.org/10.1145/326440.326442"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/chen1999emu.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@article{chen1999emu,
+    author = {Chen, Hao and Hu, Jianying and Sproat, Richard},
+    title = {Integrating Geometrical and Linguistic Analysis for E-mail Signature Block Parsing},
+    journal = {ACM Transactions on Information Systems},
+    year = {1999},
+    volume = {17},
+    number = {4},
+    doi = {https://doi.org/10.1145/326440.326442},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Hu, J.</span> &amp; <span class="author">Sproat, R.</span></span><br><span class="publication-venue">ACM Transactions on Information Systems</span> <span class="publication-volume">17</span>, 343&ndash;366<span class="publication-year"> (1999)</span></li>
+<li class="publist-item"><a id="sproat1998emu"></a><span class="publication-title">Emu: an E-mail Preprocessor for Text-to-speech</span> <a href="https://hchencs.github.io/publications/sproat1998emu.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{sproat1998emu,
+    author = {Sproat, Richard and Hu, Jianying and Chen, Hao},
+    title = {{Emu}: an E-mail Preprocessor for Text-to-speech},  
+    booktitle = {Workshop on Multimedia Signal Processing},
+    date = {1998-12-07&#x2F;1998-12-09},
+    address = {Redondo Beach, CA},
+}</code></pre></details><span class="publication-authors"><span class="author">Sproat, R.</span>, <span class="author">Hu, J.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-venue">Workshop on Multimedia Signal Processing</span>, <span class="publication-year">1998</span></li>
+<li class="publist-item"><a id="chen1998emu"></a><span class="publication-title">E-mail Signature Block Analysis</span> <a href="https://hchencs.github.io/publications/chen1998emu.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen1998emu,
+    author = {Chen, Hao and Hu, Jianying and Sproat, Richard},
+    title = {E-mail Signature Block Analysis},  
+    booktitle = {International Conference on Pattern Recognition (ICPR)},
+    date = {1998-08-16&#x2F;1998-08-20},
+    address = {Brisbane, Australia},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Hu, J.</span> &amp; <span class="author">Sproat, R.</span></span><br><span class="publication-venue">International Conference on Pattern Recognition (ICPR)</span>, <span class="publication-year">1998</span></li>
+<li class="publist-item"><a id="chen1997handwriting"></a><span class="publication-title">Piecewise Linear Modulation Model of Handwriting</span> <a href="https://hchencs.github.io/publications/chen1997handwriting.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inproceedings{chen1997handwriting,
+    author = {Chen, Hao and Agazzi, Oscar E. and Suen, Ching Y.},
+    title = {Piecewise Linear Modulation Model of Handwriting},  
+    booktitle = {International Conference on Document Analysis and Recognition (ICDAR)},
+    date = {1997-08-18&#x2F;1997-08-20},
+    address = {Ulm, Germany},
+}</code></pre></details><span class="publication-authors"><span class="author">Chen, H.</span>, <span class="author">Agazzi, O.</span> &amp; <span class="author">Suen, C.</span></span><br><span class="publication-venue">International Conference on Document Analysis and Recognition (ICDAR)</span>, <span class="publication-year">1997</span></li></ul>
+        <a id="inbook"></a>
+        <h2>Book chapters</h2>
+        <ul class="publist">
+<li class="publist-item"><a id="goues2012MTD"></a><span class="publication-title">Moving Target Defenses in the HELIX Self-Regenerative Architecture</span> <a href="https://doi.org/10.1007/978-1-4614-5416-8_7"><i class="ai ai-doi" title="DOI"></i></a> <a href="https://hchencs.github.io/publications/goues2012mtd.pdf"><i class="fa-regular fa-file-pdf" title="PDF"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@inbook{goues2012MTD,
+    author = {Goues, Claire Le and Nguyen-Tuong, Anh and Chen, Hao and Davidson, Jack W. and Forrest, Stephanie and Hiser, Jason D. and Knight, John C. and Van Gundy, Matthew},
+    title = {Moving Target Defenses in the {HELIX} Self-Regenerative Architecture},
+    booktitle = {Moving Target Defense II: Application of Game Theory and Adversarial Modeling},
+    year = {2012},
+    pages = {117--149},
+    editor = {Sushil Jajodia et al.},
+    publisher = {Springer-Verlag New York},
+    doi = {https://doi.org/10.1007/978-1-4614-5416-8_7},
+}</code></pre></details><span class="publication-authors"><span class="author">Goues, C.</span>, <span class="author">Nguyen-Tuong, A.</span>, <span class="author">Chen, H.</span>, <span class="author">Davidson, J.</span>, <span class="author">Forrest, S.</span>, <span class="author">Hiser, J.</span>, <span class="author">Knight, J.</span> &amp; <span class="author">Van Gundy, M.</span></span><br>In <span class="publication-venue">Moving Target Defense II: Application of Game Theory and Adversarial Modeling</span>, 117&ndash;149, Springer-Verlag New York, <span class="publication-year">2012</span></li></ul>
+        
+        <a id="misc"></a>
+        <h2>Preprints</h2>
+        <ul class="publist">
+<li class="publist-item"><a id="zhang2024llamafuzz"></a><span class="publication-title">LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing</span> <a href="https://doi.org/10.48550/arXiv.2406.07714"><i class="ai ai-doi" title="DOI"></i></a> <details class="bibtex"><summary><i class="fa-solid fa-quote-left" title="BibLaTeX"></i></summary><pre class="bib-data"><code>@misc{zhang2024llamafuzz,
+    author = {Zhang, Hongxiang and Rong, Yuyang and He, Yifeng and Chen, Hao},
+    title = {LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing},
+    doi = {https://doi.org/10.48550/arXiv.2406.07714},
+}</code></pre></details><span class="publication-authors"><span class="author">Zhang, H.</span>, <span class="author">Rong, Y.</span>, <span class="author">He, Y.</span> &amp; <span class="author">Chen, H.</span></span><br><span class="publication-year">2024</span></li></ul>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 0.8em;">Last updated: 2025-12-11. Built with <a
+                    href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/jskaza/peritus">peritus</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function () {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>

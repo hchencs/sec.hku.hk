@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>LaTeX | JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong</title>
+    <meta name="description"
+        content="Our lab conducts research in computer and information security and machine learning.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://sec.hku.hk/style.css">
+
+    
+<style>
+    .page-template {
+        padding: 4rem 0;
+    }
+    
+    .page-content {
+        /* 
+        max-width: 800px;
+        margin: 0 auto; 
+        */
+    }
+    
+    .page-header {
+        text-align: center;
+        /*
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        */
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+    
+    .page-body {
+        line-height: 1.7;
+        color: var(--text-color);
+    }
+    
+    .page-body h2,
+    .page-body h3,
+    .page-body h4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-body p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .page-body ul,
+    .page-body ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+    }
+    
+    .page-body li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .page-body blockquote {
+        border-left: 4px solid var(--primary-color);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--secondary-color);
+    }
+    
+    .page-body pre {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 0.375rem;
+        padding: 1.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+    
+    .page-body code {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .page-body pre code {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+</style>
+<script>
+    function copyCitation() {
+        const citationText = document.querySelector('.citation-text').textContent;
+        navigator.clipboard.writeText(citationText).then(function() {
+            const btn = document.querySelector('.copy-citation-btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() {
+                btn.textContent = originalText;
+            }, 2000);
+        });
+    }
+</script>
+
+
+    <!-- Dynamic color configuration from config.toml -->
+    
+    <style>
+        :root {
+            --primary-color: #003660;
+            --secondary-color: #FEBC11;
+            --accent-color: #09847A;
+            --text-color: #3D4952;
+            --background-color: #ffffff;
+            --card-background: #ffffff;
+            --border-color: #DCE1E5;
+            --light-background: #EEF0F2;
+        }
+
+        .dark-mode {
+            --text-color: #DCE1E5;
+            --background-color: #111517;
+            --card-background: #1e1e1e;
+            --border-color: #333333 ;
+        }
+
+        /* Footer link styling */
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+    </style>
+    
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://sec.hku.hk/img/favicon.ico">
+
+    
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark-mode'));
+        }
+
+        // Load dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span><i class="fa fa-bars"></i></span>
+            </div>
+
+            <div class="nav-item">
+                <a href="https://sec.hku.hk/ " class="nav-link"><img src="/img/logo.svg"
+                        alt="JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong" width="300" style="padding-top: 1rem"></a>
+            </div>
+            
+            <!-- Navigation links -->
+            <ul class="nav-menu" id="nav-menu">
+                
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/research" class="nav-link">Research</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/publications" class="nav-link">Publications</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/people" class="nav-link">People</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://sec.hku.hk/resources" class="nav-link">Resources</a>
+                </li>
+                
+                
+
+                
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+        
+<div class="page-template">
+    <div class="container">
+        <article class="page-content">
+            <header class="page-header">
+                <h1>LaTeX</h1>
+            </header>
+            
+            <div class="page-body">
+                <h2 id="advice-on-latex">Advice on LaTeX</h2>
+<ul>
+<li>Use modern implementations of LaTeX to take advantage of Unicode and other useful features.
+<ul>
+<li>Use <a href="https://www.luatex.org/">LuaLaTeX</a> instead of LaTeX or pdfLaTeX</li>
+<li>Use <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex">BibLaTeX</a> instead of BibTex</li>
+</ul>
+</li>
+<li>Use correct <a href="https://physics.nist.gov/cuu/pdf/typefaces.pdf">typefaces</a>. Particularly, <em>italics</em> should be used for variables but not for descriptive terms. <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations">More...</a>
+<ul>
+<li>Wrong: $t_{max}$</li>
+<li>Right: $t_\text{max}$</li>
+</ul>
+</li>
+<li>Do not manually add separators in large numbers. <code>\usepackage{siunitx}</code>. Then, wrap large numbers in <code>\num{}</code>.
+<ul>
+<li>Bad: 12,345</li>
+<li>Good: <code>\num{12345}</code></li>
+</ul>
+</li>
+<li>Do not manually type reference names, such as Table, Figure, Theorem. Instead, <code>\usepackage{hyperref}</code>, and then <code>\autoref{fig:xxx}</code>, <code>\autoref{tbl:xxx}</code>, <code>\autoref{thm:xxx}</code>
+<ul>
+<li>Not recommended: In Figure~\ref{fig:overview}</li>
+<li>Good: In \autoref{fig:overview}</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </article>
+    </div>
+</div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 0.8em;">Last updated: 2025-12-11. Built with <a
+                    href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/jskaza/peritus">peritus</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function () {
+            mobileMenu.classList.toggle('is-active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>

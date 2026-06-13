@@ -5,7 +5,7 @@ page_template = "page.html"
 
 ## Faculty
 
-- Chen, Ho. [Chair Professor](https://datascience.hku.hk/people/ho-chen/), [Institute of Data Science](https://datascience.hku.hk) and [Department of Computer Science](https://www.cs.hku.hk). IEEE fellow
+- Chen, Ho. Chair Professor, [School of Computer Computing and Data Science](https://www.cs.hku.hk) and [Institute of Data Science](https://datascience.hku.hk). IEEE fellow
 
 ## Postdoc
 
@@ -14,16 +14,16 @@ page_template = "page.html"
 - Zhang, Huaien
 - Zhang, Rui
 
-## PhD
+## PhD students
 
+- Li, Haiying
 - Li, Shensi
 - Lyu, Yunlong
 - Yang, Luning
 - Yu, Junzhe
 
-## Undergraduate
+## Undergraduate students
 
-- Li, Haiying
 - Lyu, Qingyang
 - Tang, Cleo (Yixuan)
 - Wang, Hanyu

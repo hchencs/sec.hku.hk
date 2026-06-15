@@ -240,7 +240,7 @@
 
         <!-- <p>Jump to <a href="#inbook">books</a>, <a href="#misc">preprints</a></p> -->
         {% set data = load_data(path="data/publications/paper.bib", format="bibtex") %}
-        <h2>Peer-reviewed articles</h2>
+        <h2>{{ config.extra.publication.title.article }}</h2>
         <ul class="publist">
             {%- for entry in data.bibliographies -%}
                 {%- if entry.entry_type == "inproceedings" or entry.entry_type == "article" -%}
@@ -248,23 +248,27 @@
                 {%- endif -%}
             {%- endfor -%}
         </ul>
-        <a id="inbook"></a>
-        <h2>Book chapters</h2>
-        <ul class="publist">
-            {%- for entry in data.bibliographies -%}
-                {%- if entry.entry_type == "inbook" -%}
+        {% if config.extra.publication.title.inbook != "" %}
+            <a id="inbook"></a>
+            <h2>Book chapters</h2>
+            <ul class="publist">
+                {%- for entry in data.bibliographies -%}
+                    {%- if entry.entry_type == "inbook" -%}
+                        {{ self::print_entry(entry=entry) }}
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        {% endif %}
+        {% if config.extra.publication.title.preprint != "" %}
+            {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
+            <a id="misc"></a>
+            <h2>Preprints</h2>
+            <ul class="publist">
+                {%- for entry in data.bibliographies -%}
                     {{ self::print_entry(entry=entry) }}
-                {%- endif -%}
-            {%- endfor -%}
-        </ul>
-        {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
-        <a id="misc"></a>
-        <h2>Preprints</h2>
-        <ul class="publist">
-            {%- for entry in data.bibliographies -%}
-                {{ self::print_entry(entry=entry) }}
-            {%- endfor -%}
-        </ul>
+                {%- endfor -%}
+            </ul>
+        {% endif %}
     </div>
 </div>
 {% endblock content %}

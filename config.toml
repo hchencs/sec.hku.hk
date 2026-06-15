@@ -32,6 +32,12 @@ prefix = "https://hchencs.github.io"
 # If author isn't empty, then highlight him/her in the author list.
 author = ""
 
+[extra.publication.title]
+# If a title is the empty string, then the section won't be printed.
+article = "Peer-reviewed articles"
+inbook = "Book chapters"
+preprint = ""
+
 [[extra.menu]]
 name = "Research"
 url = "/research/"

@@ -39,8 +39,13 @@
 }</code></pre></details><span class="publication-authors">
     {%- for author in tags.author | split(pat=" and ") -%}
         {%- if author == "others" -%}
-            {%- if loop.last -%}<i>et al.</i> {% else -%}&hellip; {% endif -%}
+            {%- set_global is_after_others = true -%}
+            {%- if loop.last %} <i>et al.</i>{%- else %} &hellip; {% endif -%}
         {%- else -%}
+            {%- if not is_after_others and not loop.first -%}
+                {%- if loop.last %} &amp; {% else -%}, {% endif -%}
+            {% endif -%}
+            {%- set_global is_after_others = false -%}
             {%- set name = author | split(pat=",") -%}
             {%- set initial = name.1 | default(value="") | truncate(length=2, end="") -%}
             {%- set author_str = name.0 ~ "," ~ initial ~ "." | trim %}
@@ -50,7 +55,6 @@
                 {%- set author_class = "author" -%}
             {%- endif -%}
             <span class="{{ author_class }}">{{ author_str }}</span>
-            {%- if not loop.last -%} , {% endif -%}
         {%- endif -%}
     {%- endfor -%}
     </span><br>

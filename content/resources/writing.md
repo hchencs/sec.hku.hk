@@ -7,7 +7,7 @@ page_template = "page.html"
 ### Contents
 - Your paper should be easily comprehensible by its reviewers. They are far less familiar with your work than you. They may not be an expert on the topic and may not be able to afford much time on your paper.
 - The introduction should convey curiosity or excitement (new problem, new solution, improved solution, impressive results, or high impact), the design novelty, substantiality, and correctness, and the evaluation relevancy and comprehensiveness.
-- Conciseness: Remove every word that contributes no meaning, such as `kind of`.
+- Conciseness: Remove every word that contributes no meaning, such as `kind of`, `basically`.
 - Use proper tenses: [1](https://www.unlv.edu/sites/default/files/page_files/27/GradCollege-VerbTenseScientificManuscripts.pdf) [2](https://berks.psu.edu/sites/berks/files/campus/VerbTense_Handout.pdf) [3](https://www.nature.com/scitable/topicpage/effective-writing-13815989/)
 
 ### Grammar

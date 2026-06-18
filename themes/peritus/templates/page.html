@@ -2,58 +2,10 @@
 
 {% block style %}
 <style>
-    .page-template {
-        padding: 4rem 0;
-    }
-    
-    .page-content {
-        /* 
-        max-width: 800px;
-        margin: 0 auto; 
-        */
-    }
-    
     .page-header {
         text-align: center;
-        /*
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--border-color);
-        */
     }
-    
-    .page-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: var(--text-color);
-    }
-    
-    .page-body {
-        line-height: 1.7;
-        color: var(--text-color);
-    }
-    
-    .page-body h2,
-    .page-body h3,
-    .page-body h4 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .page-body p {
-        margin-bottom: 1.5rem;
-    }
-    
-    .page-body ul,
-    .page-body ol {
-        margin-bottom: 1.5rem;
-        padding-left: 2rem;
-    }
-    
-    .page-body li {
-        margin-bottom: 0.5rem;
-    }
-    
+
     .page-body blockquote {
         border-left: 4px solid var(--primary-color);
         padding-left: 1.5rem;
@@ -61,7 +13,7 @@
         font-style: italic;
         color: var(--secondary-color);
     }
-    
+
     .page-body pre {
         background-color: var(--card-background);
         border: 1px solid var(--border-color);
@@ -70,7 +22,7 @@
         overflow-x: auto;
         margin: 1.5rem 0;
     }
-    
+
     .page-body code {
         background-color: var(--card-background);
         border: 1px solid var(--border-color);
@@ -78,7 +30,7 @@
         padding: 0.25rem 0.5rem;
         font-size: 0.9rem;
     }
-    
+
     .page-body pre code {
         background: none;
         border: none;
@@ -98,7 +50,7 @@
         });
     }
 </script>
-{% endblock style %} 
+{% endblock style %}
 
 {% block content %}
 <div class="page-template">
@@ -107,7 +59,7 @@
             <header class="page-header">
                 <h1>{{ page.title }}</h1>
             </header>
-            
+
             <div class="page-body">
                 {{ page.content | safe }}
             </div>
@@ -115,4 +67,4 @@
     </div>
 </div>
 
-{% endblock content %} 
+{% endblock content %}

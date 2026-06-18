@@ -17,12 +17,11 @@
   --hover-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-// Reset and base styles
+/*
 * {
   margin: 0;
-  // padding: 0;
-  box-sizing: border-box;
 }
+*/
 
 html {
   scroll-behavior: smooth;
@@ -32,42 +31,13 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
-  line-height: 1.6;
+  line-height: 1.5;
   transition: all 0.3s ease;
 }
 
 // Typography
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading-font);
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.25rem;
-}
-
 p {
-  margin-bottom: 1rem;
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 a {
@@ -99,7 +69,7 @@ summary {
 // Navigation
 .navbar {
   background-color: var(--card-background);
-  box-shadow: var(--shadow);
+  // box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -109,17 +79,11 @@ summary {
 .nav-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 90px;
-}
-
-.nav-brand a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-color);
 }
 
 .nav-menu {
@@ -183,11 +147,6 @@ summary {
 }
 
 // Hero section
-.hero-section {
-  padding: 4rem 0;
-  background-color: var(--background-color);
-}
-
 .hero-content {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -256,21 +215,6 @@ summary {
     font-size: 1.2rem;
     // color: var(--secondary-color);
     margin-bottom: 0rem;
-  }
-
-  .bio {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-    h3 {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
   }
 }
 
@@ -347,79 +291,31 @@ summary {
   }
 }
 
-// Publications
-.publist-item {
-  margin-bottom: 1rem;
-
-  img {
-    height: 1.5rem;
-  }
-
-  .fa-regular.fa-file-pdf {
-    font-size: 1.5rem;
-    color: red;
-  }
-
-  .fa-solid.fa-quote-left {
-    font-size: 1.5rem;
-    color: blue;
-  }
-
-  .fa-solid.fa-award {
-    font-size: 1.5rem;
-    color: goldenrod;
-  }
-
-  .ai.ai-doi {
-    font-size: 1.5rem;
-    color: #fab608;
-  }
-}
-
 // Footer
 .footer {
   background-color: var(--card-background);
-  border-top: 1px solid var(--border-color);
-  padding: 1rem 0;
+  // border-top: 1px solid var(--border-color);
+  // padding: 1rem 0;
   margin-top: auto;
 }
 
 .footer-content {
   text-align: center;
-  color: var(--secondary-color);
-
-  a {
-    color: var(--primary-color);
-  }
 }
 
 // Section templates
 .section-template {
-  padding: 4rem 0;
+  padding: 0rem 0;
 
   .section-header {
     text-align: center;
-    // margin-bottom: 2rem;
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: var(--secondary-color);
-    }
   }
 }
 
 // Responsive design
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
-  }
-
-  .hero-section {
-    padding: 2rem 0;
+    padding: 0;
+    font-size: 1.2em;
   }
 }

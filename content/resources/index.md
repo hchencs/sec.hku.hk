@@ -25,8 +25,9 @@ page_template = "page.html"
 - [Rust](https://doc.rust-lang.org/book/)
 
 ### Textbooks
+- [All of Statistics](https://www.stat.cmu.edu/~brian/valerie/617-2022/0%20-%20books/2004%20-%20wasserman%20-%20all%20of%20statistics.pdf)
+- [Computer Security](https://textbook.cs161.org/)
+- [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://hastie.su.domains/ElemStatLearn/)
 - [Introduction to Algorithms](http://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) ([Download](https://dl.ebooksworld.ir/books/Introduction.to.Algorithms.4th.Leiserson.Stein.Rivest.Cormen.MIT.Press.9780262046305.EBooksWorld.ir.pdf))
 - [Operating Systems: Principles and Practice](https://ospp.cs.washington.edu/) ([Download](https://www.kea.nu/files/textbooks/ospp/))
-- [All of Statistics](https://www.stat.cmu.edu/~brian/valerie/617-2022/0%20-%20books/2004%20-%20wasserman%20-%20all%20of%20statistics.pdf)
-- [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://hastie.su.domains/ElemStatLearn/)
-- [Computer Security](https://textbook.cs161.org/)
+- [Intro to Machine Learning](https://introml.mit.edu/notes/)

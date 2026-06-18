@@ -35,18 +35,6 @@
             --card-background: {{ config.extra.colors.dark_card_background | default(value="#1E1E1E") }};
             --border-color: {{ config.extra.colors.dark_border_color | default(value="#2C2C2C") }} ;
         }
-
-        /* Footer link styling */
-        .footer a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
     </style>
     {% endif %}
 
@@ -86,21 +74,21 @@
                 <a href="{{ get_url(path=" /") }}" class="nav-link">
                     {%- if config.extra.home_icon -%}
                     <img src="{{ config.extra.home_icon | safe }}"
-                        alt="{{ config.title }}" width="300" style="padding-top: 1rem">
+                        alt="{{ config.title }}" height="90" style="padding-top: 1rem">
                     {%- else -%}
                         <h2>{{ config.extra.home_text }}</h2>
                     {%- endif -%}
                 </a>
             </div>
-            
+
             <!-- Navigation links -->
             <ul class="nav-menu" id="nav-menu">
                 {% if config.extra.menu %}
-                {% for item in config.extra.menu %}
-                <li class="nav-item">
-                    <a href="{{ get_url(path=item.url) }}" class="nav-link">{{ item.name }}</a>
-                </li>
-                {% endfor %}
+                    {% for item in config.extra.menu %}
+                    <li class="nav-item">
+                        <a href="{{ get_url(path=item.url) }}" class="nav-link">{{ item.name }}</a>
+                    </li>
+                    {% endfor %}
                 {% endif %}
 
                 {% if config.extra.enable_dark_mode %}
@@ -122,7 +110,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p style="font-size: 0.8em;">Last updated: {{ now() | date }}. Built with <a
+            <p>Last updated: {{ now() | date }}. Built with <a
                     href="https://www.getzola.org/">Zola</a> using <a href="https://github.com/jskaza/peritus">peritus</a>.</p>
         </div>
     </footer>

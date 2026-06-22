@@ -7,8 +7,4 @@ Our mission is to conduct cutting-edge research in the interdisciplinary area be
 
 The lab has state-of-the-art computing facilities, including Nvidia H200 and H100 GPU clusters and abundant cloud computing resources.
 
-We are recruiting researchers, postdoctoral scholars, graduate students, and interns who are passionate about exploring the frontier of cybersecurity, machine learning. Please send your CV to `chenho AT hku.hk`
-
-## PhD recruitment for 2026 &amp; 2027
-
-We have multiple PhD positions in both Hong Kong and [Shanghai](https://www.cds.hku.hk/news/hku-signs-mou-with-shanghai-municipal-government-for-new-hku-cds-shanghai-campus-zhangjiang-hi-tech-park/). If you have a high undergraduate GPA from a highly ranked university *or* have good research experience, we'd love to hear from you.
+We have multiple PhD and postdocs [positions](recruit).

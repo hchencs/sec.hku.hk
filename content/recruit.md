@@ -13,6 +13,6 @@ We hire postdocs in both Hong Kong and Shanghai. The annual salary range is HK$ 
 
 If you have a high undergraduate GPA (> 3.7/4.0) from a highly ranked university or have good research experience, we'd love to hear from you. You may choose to work in Hong Kong or Shanghai, both of which issue the same degree certificate.
 
-## Contact
+## Apply
 
-Please send your CV (and transcripts if applying for PhD) to `chenho AT hku.hk` .
+Please fill in this [form](https://bcng518bc2ky.feishu.cn/share/base/form/shrcnaDxxKTj3N3crqoWXxKdyhc) .

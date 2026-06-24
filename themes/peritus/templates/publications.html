@@ -2,7 +2,7 @@
 
 {%- macro print_entry(entry) -%}
 {% set tags = entry.tags %}
-<li class="publication-item"><a id="{{ entry.citation_key }}"></a><span class="publication-title">{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</span>
+<li class="publication-item" id="{{ entry.citation_key }}"><span class="publication-title">{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</span>
     {%- if tags.addendum -%}
         {%- if tags.addendum | lower == "best paper award" %} <i class="fa-solid fa-award" title="Best paper award"></i>
         {%- endif -%}
@@ -83,10 +83,11 @@
 
     .publication-item {
         margin-bottom: 0.5rem;
+        background: var(--card-background);
+        scroll-margin-top: 100px;
         // padding: 0.5rem;
         // border: 1px solid var(--border-color);
         // border-radius: 8px;
-        background: var(--card-background);
         // box-shadow: var(--shadow);
         // transition: all 0.3s ease;
 
@@ -251,8 +252,7 @@
             {%- endfor -%}
         </ul>
         {% if config.extra.publication.title.inbook != "" %}
-            <a id="inbook"></a>
-            <h2>Book chapters</h2>
+            <h2 id="inbook">Book chapters</h2>
             <ul class="publication-list">
                 {%- for entry in data.bibliographies -%}
                     {%- if entry.entry_type == "inbook" -%}
@@ -263,8 +263,7 @@
         {% endif %}
         {% if config.extra.publication.title.preprint != "" %}
             {% set data = load_data(path="data/publications/preprint.bib", format="bibtex") %}
-            <a id="misc"></a>
-            <h2>Preprints</h2>
+            <h2 id="misc">Preprints</h2>
             <ul class="publication-list">
                 {%- for entry in data.bibliographies -%}
                     {{ self::print_entry(entry=entry) }}

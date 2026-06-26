@@ -7,4 +7,6 @@ Our mission is to conduct cutting-edge research in the interdisciplinary area be
 
 The lab has state-of-the-art computing facilities, including Nvidia H200 and H100 GPU clusters and abundant cloud computing resources.
 
-We have multiple PhD and postdocs [positions](recruit).
+## Open positions
+
+We have multiple [positions](jobs) for postdoc, PhD, and research assistant.

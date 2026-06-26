@@ -28,7 +28,7 @@ home_icon = "/img/logo.svg"
 # cv = "pdf/cv.pdf"
 
 [extra.publication]
-prefix = "https://hchencs.github.io"
+prefix = "https://haochen.org"
 # If author isn't empty, then highlight him/her in the author list.
 author = ""
 
